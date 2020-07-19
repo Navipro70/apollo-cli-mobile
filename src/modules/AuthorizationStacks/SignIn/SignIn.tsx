@@ -1,13 +1,6 @@
 import React, {FC, useRef, useState} from 'react'
-import {
-    View,
-    Text,
-    StyleSheet,
-    TextInput,
-    Keyboard,
-    TouchableWithoutFeedback,
-    KeyboardAvoidingView
-} from "react-native";
+import {StyleSheet, TextInput, KeyboardAvoidingView,} from "react-native";
+import {View, Text} from 'react-native-ui-lib'
 import {commonStyles} from "../../../styles";
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
@@ -15,6 +8,7 @@ import {StackNavigationProp} from "@react-navigation/stack";
 import {TAuthScreens} from "../../../../App";
 import {AUTH_ROUTES} from "../../../constants/routes";
 import {AppButton} from "../../../components/AppButton";
+import {DismissKeyboard} from "../../../components/DissmissKeyboard";
 
 type ProfileScreenNavigationProp = StackNavigationProp<TAuthScreens,
     AUTH_ROUTES.SignIn>;
@@ -35,14 +29,14 @@ export const SignIn: FC<TProps> = ({navigation}) => {
 
     let iconName: string = securePassword ? 'eye-off-outline' : 'eye-outline'
     return (
-        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+        <DismissKeyboard>
             <KeyboardAvoidingView style={[commonStyles.view, styles.wrapper]} behavior='padding'>
-                <View style={styles.textBlock}>
-                    <Text style={styles.h3}>Good morning!</Text>
-                    <Text style={styles.h1}>Welcome back.</Text>
+                <View marginT-40 center>
+                    <Text color='grey' style={styles.h3}>Good morning!</Text>
+                    <Text color='#fff' marginT-20 style={styles.h1}>Welcome back.</Text>
                 </View>
-                <View style={styles.inputViews}>
-                    <View style={styles.iconInInputBlock}>
+                <View center>
+                    <View row bottom right>
                         <Icon
                             style={styles.inputIcon}
                             name='account-circle-outline'
@@ -61,7 +55,7 @@ export const SignIn: FC<TProps> = ({navigation}) => {
                             }}
                         />
                     </View>
-                    <View style={styles.iconInInputBlock}>
+                    <View bottom right row>
                         <Icon
                             style={styles.inputIcon}
                             name='lock-outline'
@@ -91,7 +85,7 @@ export const SignIn: FC<TProps> = ({navigation}) => {
                         />
                     </View>
                 </View>
-                <View style={styles.buttonBlock}>
+                <View center width={'100%'}>
                     <AppButton
                         extraStyles={styles.extraButtonStyle}
                         title="Login"
@@ -104,7 +98,7 @@ export const SignIn: FC<TProps> = ({navigation}) => {
                     />
                 </View>
             </KeyboardAvoidingView>
-        </TouchableWithoutFeedback>
+        </DismissKeyboard>
     )
 }
 
@@ -113,23 +107,9 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around',
         backgroundColor: '#012B48'
     },
-    textBlock: {
-        alignItems: 'center',
-        marginTop: 40
-    },
-    h1: {
-        fontSize: 40,
-        color: '#fff',
-        marginTop: 20
-    },
-    h3: {
-        fontSize: 24,
-        color: 'grey'
-    },
-    inputViews: {
-        width: '100%',
-        alignItems: 'center'
-    },
+    h1: {fontSize: 40},
+    h3: {fontSize: 24},
+    inputIcon: {paddingRight: 15},
     textInput: {
         borderBottomWidth: 2,
         borderStyle: 'solid',
@@ -138,12 +118,8 @@ const styles = StyleSheet.create({
         paddingLeft: 0,
         paddingRight: 33,
         marginTop: 30,
-        fontSize: 24,
+        fontSize: 20,
         color: '#fff'
-    },
-    buttonBlock: {
-        width: '100%',
-        alignItems: 'center'
     },
     extraButtonStyle: {
         width: '80%',
@@ -153,18 +129,8 @@ const styles = StyleSheet.create({
     extraButtonSignUp: {
         backgroundColor: '#012B48'
     },
-    iconInInputBlock: {
-        flexDirection: 'row',
-        justifyContent: 'flex-end',
-        alignItems: 'flex-end',
-        position: 'relative'
-    },
     visibleIcon: {
         position: "absolute",
         paddingBottom: 5
-    },
-    inputIcon: {
-        paddingRight: 15,
-        paddingBottom: 1
     }
 })
