@@ -5,16 +5,16 @@ import {commonStyles} from "../../../styles";
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import {StackNavigationProp} from "@react-navigation/stack";
-import {TAuthScreens} from "../../../../App";
+import {TAuthScreens} from "../../App/App";
 import {AUTH_ROUTES} from "../../../constants/routes";
 import {AppButton} from "../../../components/AppButton";
 import {DismissKeyboard} from "../../../components/DissmissKeyboard";
 
-type ProfileScreenNavigationProp = StackNavigationProp<TAuthScreens,
+type AuthScreenProp = StackNavigationProp<TAuthScreens,
     AUTH_ROUTES.SignIn>;
 
 type TProps = {
-    navigation: ProfileScreenNavigationProp;
+    navigation: AuthScreenProp;
 };
 
 type themeColor = 'grey' | '#0190F9'

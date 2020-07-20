@@ -1,16 +1,16 @@
 import React, {FC} from 'react'
 import {View, Button} from "react-native";
-import {commonStyles} from "../../styles";
+import {commonStyles} from "../../../styles";
 
 import {StackNavigationProp} from '@react-navigation/stack';
-import {TAuthScreens} from "../../../App";
-import {AUTH_ROUTES} from "../../constants/routes";
+import {TAuthScreens} from "../../App/App";
+import {AUTH_ROUTES} from "../../../constants/routes";
 
-type ProfileScreenNavigationProp = StackNavigationProp<TAuthScreens,
+type AuthScreenProp = StackNavigationProp<TAuthScreens,
     AUTH_ROUTES.SignUp>;
 
 type TProps = {
-    navigation: ProfileScreenNavigationProp;
+    navigation: AuthScreenProp;
 };
 
 export const SignUp: FC<TProps> = ({navigation}) => {
