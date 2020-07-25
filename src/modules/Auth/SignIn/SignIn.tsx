@@ -1,31 +1,24 @@
-import React, {FC, useRef, useState} from 'react'
+import React, {useRef, useState} from 'react'
 import {StyleSheet, TextInput, KeyboardAvoidingView,} from "react-native";
 import {View, Text} from 'react-native-ui-lib'
 import {commonStyles} from "../../../styles";
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-
 import {StackNavigationProp} from "@react-navigation/stack";
-import {TAuthScreens} from "../../App/App";
 import {AUTH_ROUTES} from "../../../constants/routes";
 import {AppButton} from "../../../components/AppButton";
 import {DismissKeyboard} from "../../../components/DissmissKeyboard";
-
-type AuthScreenProp = StackNavigationProp<TAuthScreens,
-    AUTH_ROUTES.SignIn>;
-
-type TProps = {
-    navigation: AuthScreenProp;
-};
+import {useNavigation} from "../../../lib/hooks/navigation/useNavigation";
 
 type themeColor = 'grey' | '#0190F9'
 
-export const SignIn: FC<TProps> = ({navigation}) => {
+export const SignIn = () => {
     const passwordInputRef = useRef<TextInput>(null)
+
     const [securePassword, setSecurePassword] = useState<boolean>(true)
     const [emailColor, setEmailColor] = useState<themeColor>('grey')
     const [passwordColor, setPasswordColor] = useState<themeColor>('grey')
 
-    const handleLogin = () => console.log('LOGIN!')
+    const navigation = useNavigation()
 
     let iconName: string = securePassword ? 'eye-off-outline' : 'eye-outline'
     return (
@@ -69,7 +62,6 @@ export const SignIn: FC<TProps> = ({navigation}) => {
                             placeholder='Password'
                             secureTextEntry={securePassword}
                             clearTextOnFocus={false}
-                            onSubmitEditing={handleLogin}
                             accessible={false}
                             onFocus={setPasswordColor.bind(null, '#0190F9')}
                             onBlur={e => {
@@ -89,7 +81,7 @@ export const SignIn: FC<TProps> = ({navigation}) => {
                     <AppButton
                         extraStyles={styles.extraButtonStyle}
                         title="Login"
-                        onPress={handleLogin}
+                        onPress={() => console.log('hello')}
                     />
                     <AppButton
                         extraStyles={{...styles.extraButtonStyle, ...styles.extraButtonSignUp}}

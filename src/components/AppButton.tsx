@@ -1,14 +1,14 @@
 import React, {FC} from 'react'
-import {StyleSheet, TouchableOpacity, Text, ViewStyle} from "react-native"
+import {StyleSheet, TouchableOpacity, Text, TouchableOpacityProps} from "react-native"
 
-type TProps = {
+interface TProps extends TouchableOpacityProps {
     onPress: () => void,
     title: string,
-    extraStyles?: ViewStyle
+    extraStyles?: object
 }
 
-export const AppButton: FC<TProps> = ({onPress, title, extraStyles}) => (
-    <TouchableOpacity onPress={onPress} style={{...styles.appButtonContainer, ...extraStyles}} activeOpacity={0.5}>
+export const AppButton: FC<TProps> = ({onPress, title, extraStyles, ...rest}) => (
+    <TouchableOpacity onPress={onPress} style={{...styles.appButtonContainer, ...extraStyles}} activeOpacity={0.5} {...rest}>
         <Text style={styles.appButtonText}>{title}</Text>
     </TouchableOpacity>
 );
