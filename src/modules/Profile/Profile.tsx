@@ -14,7 +14,7 @@ export const Profile: FC = () => {
             <View flex center>
                 <Button
                     label="Hello Profile"
-                    onPress={() => navigation.navigate(BOTTOM_ROUTES.Home)}
+                    onPress={() => navigation.navigate(BOTTOM_ROUTES.Posts)}
                 />
             </View>
         </SafeAreaView>

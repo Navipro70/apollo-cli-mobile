@@ -7,7 +7,7 @@ import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import {tabBarOptions} from "../../styles";
 
 export type TBottomScreens = {
-    [ROUTES.Home]: undefined;
+    [ROUTES.Posts]: undefined;
     [ROUTES.Profile]: undefined
 }
 
@@ -24,7 +24,7 @@ export const Tabs = () => {
                     return <Icon name={iconName} size={size} color={color}/>;
                 },
             })} tabBarOptions={tabBarOptions}>
-            <Screen name={ROUTES.Home} component={Posts}/>
+            <Screen name={ROUTES.Posts} component={Posts}/>
             <Screen name={ROUTES.Profile} component={Profile}/>
         </Navigator>
     )

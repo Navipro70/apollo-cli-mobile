@@ -4,6 +4,15 @@ export enum AUTH_ROUTES {
 }
 
 export enum BOTTOM_ROUTES {
-    Home = 'Home',
+    Posts = 'Posts',
     Profile = 'Profile'
+}
+
+export enum APP_ROUTES {
+    Auth = 'Auth',
+    Home = 'Home'
+}
+
+export enum HOME_ROUTES {
+    Tabs = 'Tabs'
 }
