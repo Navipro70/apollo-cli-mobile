@@ -1,6 +1,5 @@
 import React from "react";
-import {View} from "react-native-ui-lib";
-import {SafeAreaView} from "react-native-safe-area-context";
+import {SafeAreaView} from 'react-native'
 import {Post, useFetchAllPostsQuery} from "../../generated/graphql";
 import {FlatList, ListRenderItem} from "react-native";
 import {PostItem} from "../../components/PostItem";
@@ -15,15 +14,13 @@ export const Posts = () => {
     }
 
     return (
-        <SafeAreaView style={{backgroundColor: 'white'}}>
-            <View width={'100%'}>
+        <SafeAreaView>
                 <FlatList
                     style={{padding: 10}}
                     data={data?.getPosts as Post[]}
                     renderItem={renderItem}
                     keyExtractor={item => item.id}
                 />
-            </View>
         </SafeAreaView>
     );
 }

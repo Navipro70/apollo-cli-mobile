@@ -38,7 +38,6 @@ export const PostItem = ({postItem, onPress, ...rest}: Props) => {
 const styles = StyleSheet.create({
     postView: {
         borderWidth: 1,
-        height: 150,
         borderColor: 'pink',
         borderRadius: 10,
         backgroundColor: '#fff',
@@ -49,14 +48,16 @@ const styles = StyleSheet.create({
         elevation: 5
     },
     date: {
-        color: '#a8a8a8'
+        color: '#a8a8a8',
+        marginVertical: 10,
     },
     username: {
         fontSize: 18
     },
     body: {
         fontSize: 20,
-        color: '#919191'
+        color: '#919191',
+        marginBottom: 10
     },
     buttonGroup: {
         borderWidth: 2,
