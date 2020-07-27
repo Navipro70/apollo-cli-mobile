@@ -14,7 +14,7 @@ export const colors = {
     white: '#ffffff',
     black: '#000000',
     pink: '#FF123D',
-    gray: '#9E9E9E',
+    gray: '#9E9E9E' as const,
     backgroundGray: '#EFEFF4',
     backgroundLightGray: '#EDEDED',
     borderGray: '#E2E2E2',
@@ -24,6 +24,8 @@ export const colors = {
     transparent: 'transparent',
     darkGray: '#505050',
     green: '#4CD964',
+    aqua: '#0190F9' as const,
+    backgroundAqua: '#012B48'
 }
 
 Colors.loadColors(colors)
