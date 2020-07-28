@@ -1,18 +1,24 @@
 import React from 'react'
-import {KeyboardAvoidingView, StyleSheet} from "react-native"
-import {View, Text, Button} from "react-native-ui-lib"
+import {StyleSheet} from "react-native"
+import {View, Text} from "react-native-ui-lib"
 import {colors, commonStyles} from "../../../styles"
-import {AUTH_ROUTES} from "../../../constants/routes"
-import {useNavigation} from "../../../lib/hooks/navigation/useNavigation"
+import {AUTH_ROUTES as ROUTES} from "../../../constants/routes"
 import {useFormik} from "formik";
 import {Input} from "../../../components/Input";
 import {signUpValidator} from "../../../constants/validatiors";
 import {DismissKeyboard} from "../../../components/DissmissKeyboard";
 import {AppButton} from "../../../components/AppButton";
 import {SafeAreaView} from "react-native-safe-area-context";
+import { StackNavigationProp } from '@react-navigation/stack';
+import {TAuthScreens} from "../Auth";
 
-export const SignUp = () => {
-    const navigation = useNavigation()
+type ProfileScreenNavigationProp = StackNavigationProp<TAuthScreens, ROUTES.SignUp>;
+
+interface Props {
+    navigation: ProfileScreenNavigationProp;
+}
+
+export const SignUp = ({navigation}: Props) => {
     const formik = useFormik({
         initialValues: {
             username: '',
@@ -28,7 +34,7 @@ export const SignUp = () => {
     return (
         <DismissKeyboard>
             <SafeAreaView style={[commonStyles.view, styles.wrapper]}>
-                <View center marginT-25>
+                <View center marginT-40>
                     <Text style={styles.h1} children='Create your account'/>
                 </View>
                 <View center>
@@ -91,7 +97,7 @@ export const SignUp = () => {
                     <AppButton
                         style={{...styles.button, ...styles.extraButton}}
                         title="Sign In"
-                        onPress={() => navigation.navigate(AUTH_ROUTES.SignIn)}
+                        onPress={() => navigation.navigate(ROUTES.SignIn)}
                     />
                 </View>
             </SafeAreaView>
@@ -102,7 +108,7 @@ export const SignUp = () => {
 const styles = StyleSheet.create({
     wrapper: {
         backgroundColor: colors.backgroundAqua,
-        justifyContent: 'space-around',
+        justifyContent: 'space-between',
     },
     h1: {
         fontSize: 30,

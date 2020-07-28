@@ -1,25 +1,32 @@
 import React from 'react'
-import {StyleSheet, KeyboardAvoidingView} from "react-native";
+import {StyleSheet} from "react-native";
 import {View, Text} from 'react-native-ui-lib'
 import {colors, commonStyles} from "../../../styles";
-import {AUTH_ROUTES} from "../../../constants/routes";
+import {AUTH_ROUTES as ROUTES} from "../../../constants/routes";
 import {AppButton} from "../../../components/AppButton";
 import {DismissKeyboard} from "../../../components/DissmissKeyboard";
-import {useNavigation} from "../../../lib/hooks/navigation/useNavigation";
 import {Input} from "../../../components/Input";
+import {SafeAreaView} from "react-native-safe-area-context";
+import {StackNavigationProp} from "@react-navigation/stack";
+import {TAuthScreens} from "../Auth";
+
+type ProfileScreenNavigationProp = StackNavigationProp<TAuthScreens, ROUTES.SignIn>;
+
+interface Props {
+    navigation: ProfileScreenNavigationProp;
+}
 
 const {gray, aqua} = colors
 
-export const SignIn = () => {
-    const navigation = useNavigation()
+export const SignInView = ({navigation}: Props) => {
     return (
         <DismissKeyboard>
-            <KeyboardAvoidingView style={[commonStyles.view, styles.wrapper]} behavior='padding'>
-                <View marginT-40 center flexG-2>
-                    <Text color={gray} style={styles.h3} children='Good morning!' />
+            <SafeAreaView style={[commonStyles.view, styles.wrapper]}>
+                <View marginT-40 center>
+                    <Text color={gray} style={styles.h3} children='Good morning!'/>
                     <Text color='#fff' marginT-20 style={styles.h1} children='Welcome back.'/>
                 </View>
-                <View center flexG-3>
+                <View center>
                     <Input
                         inputIcon='account-circle-outline'
                         color={aqua}
@@ -41,7 +48,7 @@ export const SignIn = () => {
                         }}
                     />
                 </View>
-                <View center width='100%' flexG-2>
+                <View center width='100%' marginB-10>
                     <AppButton
                         style={styles.extraButtonStyle}
                         title="Login"
@@ -50,17 +57,18 @@ export const SignIn = () => {
                     <AppButton
                         style={{...styles.extraButtonStyle, ...styles.extraButton}}
                         title="SignUp"
-                        onPress={() => navigation.navigate(AUTH_ROUTES.SignUp)}
+                        onPress={() => navigation.navigate(ROUTES.SignUp)}
                     />
                 </View>
-            </KeyboardAvoidingView>
+            </SafeAreaView>
         </DismissKeyboard>
     )
 }
 
 const styles = StyleSheet.create({
     wrapper: {
-        backgroundColor: colors.backgroundAqua
+        backgroundColor: colors.backgroundAqua,
+        justifyContent: 'space-between'
     },
     h1: {
         fontSize: 40
