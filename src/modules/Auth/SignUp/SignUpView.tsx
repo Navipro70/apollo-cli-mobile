@@ -1,7 +1,7 @@
 import React from 'react'
 import {StyleSheet} from "react-native"
 import {View, Text} from "react-native-ui-lib"
-import {colors, commonStyles} from "../../../styles"
+import {colors} from "../../../styles"
 import {AUTH_ROUTES as ROUTES} from "../../../constants/routes"
 import {useFormik} from "formik";
 import {Input} from "../../../components/Input";
@@ -32,8 +32,8 @@ export const SignUp = ({navigation}: Props) => {
         }
     })
     return (
-        <SafeAreaView style={styles.wrapper}>
-            <KeyboardAwareScrollView contentContainerStyle={[commonStyles.view]}>
+        <SafeAreaView style={styles.container}>
+            <KeyboardAwareScrollView contentContainerStyle={styles.wrapper}>
                 <View center marginT-40>
                     <Text style={styles.h1} children='Create your account'/>
                 </View>
@@ -106,9 +106,13 @@ export const SignUp = ({navigation}: Props) => {
 }
 
 const styles = StyleSheet.create({
-    wrapper: {
+    container: {
         flex: 1,
         backgroundColor: colors.backgroundAqua,
+    },
+    wrapper: {
+        flex: 1,
+        justifyContent: 'space-between',
     },
     h1: {
         fontSize: 30,

@@ -1,14 +1,14 @@
 import React from 'react'
 import {StyleSheet} from "react-native";
 import {View, Text} from 'react-native-ui-lib'
-import {colors, commonStyles} from "../../../styles";
+import {colors} from "../../../styles";
 import {AUTH_ROUTES as ROUTES} from "../../../constants/routes";
 import {AppButton} from "../../../components/AppButton";
-import {DismissKeyboard} from "../../../components/DissmissKeyboard";
 import {Input} from "../../../components/Input";
 import {SafeAreaView} from "react-native-safe-area-context";
 import {StackNavigationProp} from "@react-navigation/stack";
 import {TAuthScreens} from "../Auth";
+import {KeyboardAwareScrollView} from "react-native-keyboard-aware-scroll-view";
 
 type ProfileScreenNavigationProp = StackNavigationProp<TAuthScreens, ROUTES.SignIn>;
 
@@ -20,8 +20,8 @@ const {gray, aqua} = colors
 
 export const SignInView = ({navigation}: Props) => {
     return (
-        <DismissKeyboard>
-            <SafeAreaView style={[commonStyles.view, styles.wrapper]}>
+            <SafeAreaView style={styles.container}>
+                <KeyboardAwareScrollView contentContainerStyle={styles.wrapper}>
                 <View marginT-40 center>
                     <Text color={gray} style={styles.h3} children='Good morning!'/>
                     <Text color='#fff' marginT-20 style={styles.h1} children='Welcome back.'/>
@@ -60,14 +60,18 @@ export const SignInView = ({navigation}: Props) => {
                         onPress={() => navigation.navigate(ROUTES.SignUp)}
                     />
                 </View>
+                </KeyboardAwareScrollView>
             </SafeAreaView>
-        </DismissKeyboard>
     )
 }
 
 const styles = StyleSheet.create({
-    wrapper: {
+    container: {
+        flex: 1,
         backgroundColor: colors.backgroundAqua,
+    },
+    wrapper: {
+        flex: 1,
         justifyContent: 'space-between'
     },
     h1: {
