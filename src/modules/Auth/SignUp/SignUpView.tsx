@@ -6,11 +6,11 @@ import {AUTH_ROUTES as ROUTES} from "../../../constants/routes"
 import {useFormik} from "formik";
 import {Input} from "../../../components/Input";
 import {signUpValidator} from "../../../constants/validatiors";
-import {DismissKeyboard} from "../../../components/DissmissKeyboard";
 import {AppButton} from "../../../components/AppButton";
 import {SafeAreaView} from "react-native-safe-area-context";
 import { StackNavigationProp } from '@react-navigation/stack';
 import {TAuthScreens} from "../Auth";
+import {KeyboardAwareScrollView} from "react-native-keyboard-aware-scroll-view";
 
 type ProfileScreenNavigationProp = StackNavigationProp<TAuthScreens, ROUTES.SignUp>;
 
@@ -32,8 +32,8 @@ export const SignUp = ({navigation}: Props) => {
         }
     })
     return (
-        <DismissKeyboard>
-            <SafeAreaView style={[commonStyles.view, styles.wrapper]}>
+        <SafeAreaView style={styles.wrapper}>
+            <KeyboardAwareScrollView contentContainerStyle={[commonStyles.view]}>
                 <View center marginT-40>
                     <Text style={styles.h1} children='Create your account'/>
                 </View>
@@ -100,15 +100,15 @@ export const SignUp = ({navigation}: Props) => {
                         onPress={() => navigation.navigate(ROUTES.SignIn)}
                     />
                 </View>
-            </SafeAreaView>
-        </DismissKeyboard>
+            </KeyboardAwareScrollView>
+        </SafeAreaView>
     );
 }
 
 const styles = StyleSheet.create({
     wrapper: {
+        flex: 1,
         backgroundColor: colors.backgroundAqua,
-        justifyContent: 'space-between',
     },
     h1: {
         fontSize: 30,
