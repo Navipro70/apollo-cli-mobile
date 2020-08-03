@@ -10,3 +10,8 @@ export const signUpValidator = Yup.object().shape({
     .min(5, "Too short")
     .required("Field is required"),
 });
+
+export const signInValidator = Yup.object().shape({
+  username: Yup.string().required("Field is required"),
+  password: Yup.string().min(5, "Too short").required("Field is required"),
+});

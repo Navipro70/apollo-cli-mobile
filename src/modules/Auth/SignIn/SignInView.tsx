@@ -9,24 +9,41 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { TAuthScreens } from "../Auth";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
-
-type ProfileScreenNavigationProp = StackNavigationProp<
-  TAuthScreens,
-  ROUTES.SignIn
->;
+import { useFormik } from "formik";
+import {
+  signInValidator,
+  signUpValidator,
+} from "../../../constants/validatiors";
+import { RegisterInput } from "../../../generated/graphql";
+import { FormikHelpers } from "formik/dist/types";
 
 interface Props {
-  navigation: ProfileScreenNavigationProp;
+  loading: boolean;
+  signUpHandler: () => void;
+  onSubmit: (
+    values: RegisterInput,
+    formikHelpers: FormikHelpers<RegisterInput>
+  ) => void | Promise<any>;
 }
 
-const { gray, aqua } = colors;
-
-export const SignInView = ({ navigation }: Props) => {
+export const SignInView = ({ onSubmit, signUpHandler }: Props) => {
+  const formik = useFormik({
+    initialValues: {
+      username: "",
+      password: "",
+    },
+    validationSchema: signInValidator,
+    onSubmit,
+  });
   return (
     <SafeAreaView style={styles.container}>
       <KeyboardAwareScrollView contentContainerStyle={styles.wrapper}>
         <View marginT-40 center>
-          <Text color={gray} style={styles.h3} children="Good morning!" />
+          <Text
+            color={colors.gray}
+            style={styles.h3}
+            children="Good morning!"
+          />
           <Text
             color="#fff"
             marginT-20
@@ -37,7 +54,7 @@ export const SignInView = ({ navigation }: Props) => {
         <View center>
           <Input
             inputIcon="account-circle-outline"
-            color={aqua}
+            color={colors.aqua}
             style={styles.textInput}
             placeholder="Email"
             autoCompleteType="off"
@@ -49,7 +66,7 @@ export const SignInView = ({ navigation }: Props) => {
             placeholder="Password"
             secure
             inputIcon="lock-outline"
-            color={aqua}
+            color={colors.aqua}
             value={""}
             onChangeText={() => {}}
           />
@@ -63,7 +80,7 @@ export const SignInView = ({ navigation }: Props) => {
           <AppButton
             style={{ ...styles.extraButtonStyle, ...styles.extraButton }}
             title="SignUp"
-            onPress={() => navigation.navigate(ROUTES.SignUp)}
+            onPress={signUpHandler}
           />
         </View>
       </KeyboardAwareScrollView>
