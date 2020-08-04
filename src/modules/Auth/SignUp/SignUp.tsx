@@ -1,5 +1,5 @@
 import { SignUpView } from "./SignUpView";
-import React from "react";
+import React, { useState } from "react";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { TAuthScreens } from "../Auth";
 import { AUTH_ROUTES as ROUTES } from "../../../constants/routes";

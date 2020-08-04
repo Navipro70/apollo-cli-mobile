@@ -44,12 +44,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   appButtonWrapper: {
-    minHeight: 60,
     elevation: 8,
+    height: 60,
     backgroundColor: "#0190F9",
     borderRadius: 30,
-    paddingVertical: 10,
-    paddingHorizontal: 12,
     alignItems: "center",
     justifyContent: "center",
   },
@@ -63,9 +61,8 @@ const styles = StyleSheet.create({
   spinner: {
     position: "absolute",
     zIndex: 100,
-    top: 0,
-    bottom: 0,
     right: 0,
     left: 0,
+    bottom: 0,
   },
 });

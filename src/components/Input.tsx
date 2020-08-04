@@ -46,6 +46,8 @@ export const Input = ({
         secureTextEntry={securePassword}
         color={color}
         error={error}
+        autoCapitalize="none"
+        autoCorrect={false}
         {...rest}
       />
       <View right centerV>

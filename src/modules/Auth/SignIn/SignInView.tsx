@@ -14,9 +14,15 @@ interface Props {
   loading: boolean;
   signUpHandler: () => void;
   onSubmit: TSignInFormik;
+  generalError: string;
 }
 
-export const SignInView = ({ onSubmit, signUpHandler }: Props) => {
+export const SignInView = ({
+  onSubmit,
+  signUpHandler,
+  loading,
+  generalError,
+}: Props) => {
   const formik = useFormik({
     initialValues: {
       username: "",
@@ -44,32 +50,42 @@ export const SignInView = ({ onSubmit, signUpHandler }: Props) => {
         </View>
         <View center>
           <Input
+            value={formik.values.username}
+            onChangeText={(text) => formik.setFieldValue("username", text)}
+            onFocus={() => formik.setFieldTouched("username", false)}
+            onBlur={() => formik.setFieldTouched("username", true)}
+            error={formik.touched.username ? formik.errors.username : undefined}
+            style={styles.input}
+            maxLength={30}
             inputIcon="account-circle-outline"
             color={colors.aqua}
-            style={styles.textInput}
-            placeholder="Email"
-            autoCompleteType="off"
-            value={""}
-            onChangeText={() => {}}
+            placeholder="Username"
           />
           <Input
-            style={styles.textInput}
-            placeholder="Password"
-            secure
+            value={formik.values.password}
+            onChangeText={(text) => formik.setFieldValue("password", text)}
+            onFocus={() => formik.setFieldTouched("password", false)}
+            onBlur={() => formik.setFieldTouched("password", true)}
+            error={formik.touched.password ? formik.errors.password : undefined}
+            style={styles.input}
+            maxLength={30}
             inputIcon="lock-outline"
             color={colors.aqua}
-            value={""}
-            onChangeText={() => {}}
+            placeholder="Password"
+            onSubmitEditing={() => formik.handleSubmit()}
+            secure
           />
+          <Text children={generalError} style={styles.generalError} />
         </View>
-        <View center width="100%" marginB-10>
+        <View center marginB-10>
           <AppButton
-            style={styles.extraButtonStyle}
+            style={styles.extraButton}
             title="Login"
-            onPress={() => console.log("hello")}
+            onPress={formik.handleSubmit}
+            loading={loading}
           />
           <AppButton
-            style={{ ...styles.extraButtonStyle, ...styles.extraButton }}
+            style={{ ...styles.extraButton, ...styles.button }}
             title="SignUp"
             onPress={signUpHandler}
           />
@@ -97,11 +113,18 @@ const styles = StyleSheet.create({
   textInput: {
     width: "75%",
   },
-  extraButtonStyle: {
+  extraButton: {
     width: "80%",
     marginTop: 20,
   },
-  extraButton: {
+  button: {
     backgroundColor: colors.backgroundAqua,
+  },
+  input: {
+    width: "75%",
+  },
+  generalError: {
+    color: colors.red,
+    fontSize: 16,
   },
 });
