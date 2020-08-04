@@ -8,16 +8,12 @@ import { signUpValidator } from "../../../constants/validatiors";
 import { AppButton } from "../../../components/AppButton";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
-import { RegisterInput } from "../../../generated/graphql";
-import { FormikHelpers } from "formik/dist/types";
+import { TSignUpFormik } from "../../../types";
 
 interface Props {
   signInHandler: () => void;
   loading: boolean;
-  onSubmit: (
-    values: RegisterInput,
-    formikHelpers: FormikHelpers<RegisterInput>
-  ) => void | Promise<any>;
+  onSubmit: TSignUpFormik;
 }
 
 export const SignUpView = ({ signInHandler, loading, onSubmit }: Props) => {
@@ -31,6 +27,7 @@ export const SignUpView = ({ signInHandler, loading, onSubmit }: Props) => {
     validationSchema: signUpValidator,
     onSubmit,
   });
+
   return (
     <SafeAreaView style={styles.container}>
       <KeyboardAwareScrollView contentContainerStyle={styles.wrapper}>

@@ -7,3 +7,13 @@ mutation registerUser ($username: String!, $email: String!, $password: String!, 
         createdAt
     }
 }
+
+mutation loginUser ($username: String! , $password: String!) {
+    login (username: $username, password: $password) {
+        id
+        email
+        token
+        username
+        createdAt
+    }
+}

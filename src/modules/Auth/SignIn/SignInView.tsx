@@ -2,28 +2,18 @@ import React from "react";
 import { StyleSheet } from "react-native";
 import { View, Text } from "react-native-ui-lib";
 import { colors } from "../../../styles";
-import { AUTH_ROUTES as ROUTES } from "../../../constants/routes";
 import { AppButton } from "../../../components/AppButton";
 import { Input } from "../../../components/Input";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { StackNavigationProp } from "@react-navigation/stack";
-import { TAuthScreens } from "../Auth";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { useFormik } from "formik";
-import {
-  signInValidator,
-  signUpValidator,
-} from "../../../constants/validatiors";
-import { RegisterInput } from "../../../generated/graphql";
-import { FormikHelpers } from "formik/dist/types";
+import { signInValidator } from "../../../constants/validatiors";
+import { TSignInFormik } from "../../../types";
 
 interface Props {
   loading: boolean;
   signUpHandler: () => void;
-  onSubmit: (
-    values: RegisterInput,
-    formikHelpers: FormikHelpers<RegisterInput>
-  ) => void | Promise<any>;
+  onSubmit: TSignInFormik;
 }
 
 export const SignInView = ({ onSubmit, signUpHandler }: Props) => {
@@ -35,6 +25,7 @@ export const SignInView = ({ onSubmit, signUpHandler }: Props) => {
     validationSchema: signInValidator,
     onSubmit,
   });
+
   return (
     <SafeAreaView style={styles.container}>
       <KeyboardAwareScrollView contentContainerStyle={styles.wrapper}>
