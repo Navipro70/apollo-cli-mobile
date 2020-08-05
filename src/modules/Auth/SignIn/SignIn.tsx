@@ -6,7 +6,6 @@ import { AUTH_ROUTES as ROUTES } from "../../../constants/routes";
 import { useLoginUserMutation } from "../../../generated/graphql";
 import { extractServerError } from "../../../lib/hooks/extractServerGraphQLError";
 import { TSignInFormik } from "../../../types";
-import { SignUpView } from "../SignUp/SignUpView";
 
 interface Props {
   navigation: StackNavigationProp<TAuthScreens, ROUTES.SignIn>;
@@ -18,7 +17,7 @@ export const SingIn = ({ navigation }: Props) => {
   const [loginUser, { loading }] = useLoginUserMutation();
   const [generalError, setGeneralError] = useState("");
 
-  const onSubmit: TSignInFormik = async (values, formikBag) => {
+  const onSubmit: TSignInFormik = async (values) => {
     setGeneralError("");
     try {
       await loginUser({

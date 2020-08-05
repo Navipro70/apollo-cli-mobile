@@ -1,9 +1,10 @@
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
 import { Providers } from "./Providers";
 import { Auth } from "../Auth/Auth";
 import { APP_ROUTES as ROUTES } from "../../constants/routes";
 import { createStackNavigator } from "@react-navigation/stack";
 import { Home } from "./Home";
+import { UserContext, userContextState } from "../../lib/hooks/useCurrentUser";
 
 export const App = () => {
   return (
@@ -21,14 +22,17 @@ export type TAppScreens = {
 const Stack = createStackNavigator<TAppScreens>();
 
 const AppBase: FC = () => {
-  const [authorized, setAuthorized] = useState(true);
+  const data = userContextState();
+
   return (
-    <Stack.Navigator
-      headerMode="none"
-      screenOptions={{ animationEnabled: false }}
-    >
-      {authorized && <Stack.Screen name={ROUTES.Auth} component={Auth} />}
-      {!authorized && <Stack.Screen name={ROUTES.Home} component={Home} />}
-    </Stack.Navigator>
+    <UserContext.Provider value={data}>
+      <Stack.Navigator
+        headerMode="none"
+        screenOptions={{ animationEnabled: false }}
+      >
+        {!data.user && <Stack.Screen name={ROUTES.Auth} component={Auth} />}
+        {data.user && <Stack.Screen name={ROUTES.Home} component={Home} />}
+      </Stack.Navigator>
+    </UserContext.Provider>
   );
 };
