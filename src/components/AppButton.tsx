@@ -13,6 +13,7 @@ interface TProps extends TouchableOpacityProps {
   onPress: () => void;
   title: string;
   style?: object;
+  spinnerStyle?: object;
   loading?: boolean;
 }
 
@@ -21,6 +22,7 @@ export const AppButton: FC<TProps> = ({
   title,
   style,
   loading,
+  spinnerStyle,
   ...rest
 }) => (
   <TouchableOpacity
@@ -30,7 +32,7 @@ export const AppButton: FC<TProps> = ({
     style={styles.container}
     {...rest}
   >
-    {loading && <Spinner style={styles.spinner} size={30} color={colors.red} />}
+    {loading && <Spinner size={30} color={colors.red} style={spinnerStyle} />}
     <View style={[styles.appButtonWrapper, style, loading && { opacity: 0.2 }]}>
       <Text style={styles.appButtonText}>{title}</Text>
     </View>
@@ -57,12 +59,5 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     alignSelf: "center",
     textTransform: "uppercase",
-  },
-  spinner: {
-    position: "absolute",
-    zIndex: 100,
-    right: 0,
-    left: 0,
-    bottom: 0,
   },
 });

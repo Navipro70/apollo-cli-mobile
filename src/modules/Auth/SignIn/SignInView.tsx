@@ -75,7 +75,9 @@ export const SignInView = ({
             onSubmitEditing={() => formik.handleSubmit()}
             secure
           />
-          <Text children={generalError} style={styles.generalError} />
+          <View center>
+            <Text children={generalError} style={styles.generalError} />
+          </View>
         </View>
         <View center marginB-10>
           <AppButton
@@ -124,6 +126,7 @@ const styles = StyleSheet.create({
     width: "75%",
   },
   generalError: {
+    position: "absolute",
     color: colors.red,
     fontSize: 16,
   },

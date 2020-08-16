@@ -1,6 +1,5 @@
 import React from "react";
 import * as Progress from "react-native-progress";
-import { View } from "react-native-ui-lib";
 
 interface Props {
   color?: string;
@@ -9,12 +8,20 @@ interface Props {
 }
 
 export const Spinner = ({ color = "#990000", size = 21, style }: Props) => (
-  <View center style={style}>
-    <Progress.Circle
-      indeterminate
-      borderColor={color}
-      borderWidth={1.5}
-      size={size}
-    />
-  </View>
+  <Progress.Circle
+    indeterminate
+    borderColor={color}
+    borderWidth={1.5}
+    size={size}
+    style={{
+      position: "absolute",
+      justifyContent: "center",
+      alignItems: "center",
+      top: 20,
+      bottom: 0,
+      left: 0,
+      right: 0,
+      ...style,
+    }}
+  />
 );

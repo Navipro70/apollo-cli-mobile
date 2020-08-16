@@ -99,6 +99,7 @@ export const SignUpView = ({ signInHandler, loading, onSubmit }: Props) => {
             title="Submit"
             onPress={formik.handleSubmit}
             loading={loading}
+            spinnerStyle={styles.spinner}
           />
           <AppButton
             style={{ ...styles.button, ...styles.extraButton }}
@@ -133,5 +134,8 @@ const styles = StyleSheet.create({
   },
   extraButton: {
     backgroundColor: colors.backgroundAqua,
+  },
+  spinner: {
+    top: 0,
   },
 });
