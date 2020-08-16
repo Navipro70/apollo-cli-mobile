@@ -1,6 +1,7 @@
 import React, { useContext, useReducer } from "react";
 import { User } from "../../generated/graphql";
 import { TAuthReducer } from "../../types";
+import { AuthReducer } from "../../constants/reducers";
 
 interface IContext {
   user: User | null;
@@ -8,9 +9,7 @@ interface IContext {
   logout: () => void;
 }
 
-interface IAuthState {
-  user: User | null;
-}
+type IAuthState = Pick<IContext, "user">;
 
 export const UserContext = React.createContext<IContext>({
   user: null,

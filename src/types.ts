@@ -1,5 +1,6 @@
 import { FormikHelpers } from "formik";
 import { MutationLoginArgs, RegisterInput, User } from "./generated/graphql";
+import { AuthReducer } from "./constants/reducers";
 
 export type FormikOnSubmit<T> = (
   values: T,

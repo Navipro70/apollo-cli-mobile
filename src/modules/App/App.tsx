@@ -23,7 +23,6 @@ const Stack = createStackNavigator<TAppScreens>();
 
 const AppBase: FC = () => {
   const data = userContextState();
-
   return (
     <UserContext.Provider value={data}>
       <Stack.Navigator
