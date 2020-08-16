@@ -1,22 +1,26 @@
-import React, {FC} from "react";
-import {Button, View} from "react-native-ui-lib";
-import {BOTTOM_ROUTES} from "../../constants/routes";
-import {StackNavigationProp} from "@react-navigation/stack";
-import {SafeAreaView} from "react-native-safe-area-context";
-import {TBottomScreens} from "../App/Tabs";
-import {useNavigation} from "../../lib/hooks/navigation/useNavigation";
-
+import React, { FC } from "react";
+import { Button, View, Text } from "react-native-ui-lib";
+import { BOTTOM_ROUTES } from "../../constants/routes";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { useNavigation } from "../../lib/hooks/navigation/useNavigation";
+import { useCurrentUser } from "../../lib/hooks/useCurrentUser";
 
 export const Profile: FC = () => {
-    const navigation = useNavigation()
-    return (
-        <SafeAreaView style={{flex: 1}}>
-            <View flex center>
-                <Button
-                    label="Hello Profile"
-                    onPress={() => navigation.navigate(BOTTOM_ROUTES.Posts)}
-                />
-            </View>
-        </SafeAreaView>
-    )
-}
+  const navigation = useNavigation();
+  const { user } = useCurrentUser();
+
+  return (
+    <SafeAreaView style={{ flex: 1 }}>
+      <View flex center>
+        <Text children={user?.email} />
+        <Text children={user?.createdAt} />
+        <Text children={user?.username} />
+        <Text children={user?.id} />
+        <Button
+          label="Hello Profile"
+          onPress={() => navigation.navigate(BOTTOM_ROUTES.Posts)}
+        />
+      </View>
+    </SafeAreaView>
+  );
+};

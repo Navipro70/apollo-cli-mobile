@@ -16,7 +16,7 @@ export const SingIn = ({ navigation }: Props) => {
   const signUpHandler = () => navigation.navigate(ROUTES.SignUp);
 
   const [loginUser, { loading }] = useLoginUserMutation();
-  const { login } = useCurrentUser();
+  const user = useCurrentUser();
   const [generalError, setGeneralError] = useState("");
 
   const onSubmit: TSignInFormik = async (values) => {
@@ -25,9 +25,8 @@ export const SingIn = ({ navigation }: Props) => {
       const { data } = await loginUser({
         variables: values,
       });
-      login(data?.login as User);
+      if (data) user.login(data.login);
     } catch (err) {
-      console.log(err);
       const [_, messageError] = extractServerError(err);
       setGeneralError(messageError as string);
     }
