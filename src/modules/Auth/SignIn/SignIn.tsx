@@ -7,6 +7,8 @@ import { useLoginUserMutation, User } from "../../../generated/graphql";
 import { extractServerError } from "../../../lib/hooks/extractServerGraphQLError";
 import { TSignInFormik } from "../../../types";
 import { useCurrentUser } from "../../../lib/hooks/useCurrentUser";
+import { StorageKeys } from "../../../constants/constants";
+import AsyncStorage from "@react-native-community/async-storage";
 
 interface Props {
   navigation: StackNavigationProp<TAuthScreens, ROUTES.SignIn>;
@@ -25,7 +27,10 @@ export const SingIn = ({ navigation }: Props) => {
       const { data } = await loginUser({
         variables: values,
       });
-      if (data) user.login(data.login);
+      if (data) {
+        await AsyncStorage.setItem(StorageKeys.Token, data.login.token);
+        user.login(data.login);
+      }
     } catch (err) {
       const [_, messageError] = extractServerError(err);
       setGeneralError(messageError as string);

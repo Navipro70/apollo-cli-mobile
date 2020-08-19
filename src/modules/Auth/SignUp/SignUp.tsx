@@ -1,12 +1,14 @@
 import { SignUpView } from "./SignUpView";
-import React, { useState } from "react";
+import React from "react";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { TAuthScreens } from "../Auth";
 import { AUTH_ROUTES as ROUTES } from "../../../constants/routes";
-import { User, useRegisterUserMutation } from "../../../generated/graphql";
+import { useRegisterUserMutation } from "../../../generated/graphql";
 import { extractServerError } from "../../../lib/hooks/extractServerGraphQLError";
 import { TSignUpFormik } from "../../../types";
 import { useCurrentUser } from "../../../lib/hooks/useCurrentUser";
+import { StorageKeys } from "../../../constants/constants";
+import AsyncStorage from "@react-native-community/async-storage";
 
 interface Props {
   navigation: StackNavigationProp<TAuthScreens, ROUTES.SignUp>;
@@ -23,7 +25,10 @@ export const SignUp = ({ navigation }: Props) => {
       const { data } = await addUser({
         variables: values,
       });
-      if (data) user.login(data.register);
+      if (data) {
+        await AsyncStorage.setItem(StorageKeys.Token, data.register.token);
+        user.login(data.register);
+      }
     } catch (err) {
       const [fieldError, messageError] = extractServerError(err);
       if (fieldError && messageError)
