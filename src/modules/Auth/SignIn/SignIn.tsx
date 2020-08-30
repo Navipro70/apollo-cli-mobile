@@ -9,6 +9,7 @@ import { TSignInFormik } from "../../../types";
 import { useCurrentUser } from "../../../lib/hooks/useCurrentUser";
 import { StorageKeys } from "../../../constants/constants";
 import AsyncStorage from "@react-native-community/async-storage";
+import { useNotify } from "../../../lib/hooks/useNotify/useNotify";
 
 interface Props {
   navigation: StackNavigationProp<TAuthScreens, ROUTES.SignIn>;
@@ -16,6 +17,7 @@ interface Props {
 
 export const SingIn = ({ navigation }: Props) => {
   const signUpHandler = () => navigation.navigate(ROUTES.SignUp);
+  const notify = useNotify();
 
   const [loginUser, { loading }] = useLoginUserMutation();
   const user = useCurrentUser();
