@@ -3,6 +3,7 @@ import { User } from "../../generated/graphql";
 import { TAuthReducer } from "../../types";
 import { AuthReducer } from "../../constants/reducers";
 import { StorageKeys } from "../../constants/constants";
+import AsyncStorage from "@react-native-community/async-storage";
 
 interface IContext {
   user: User | null;
@@ -47,8 +48,8 @@ function authReducer(state: IAuthState, action: TAuthReducer) {
   }
 }
 
-export function userContextState(): IContext {
-  const [state, dispatch] = useReducer(authReducer, { user: null });
+export function userContextState(initialState): IContext {
+  const [state, dispatch] = useReducer(authReducer, initialState);
   function login(userData: User) {
     dispatch({
       type: AuthReducer.Login,
@@ -56,7 +57,8 @@ export function userContextState(): IContext {
     });
   }
 
-  function logout() {
+  async function logout() {
+    await AsyncStorage.removeItem(StorageKeys.Token);
     dispatch({
       type: AuthReducer.Logout,
     });

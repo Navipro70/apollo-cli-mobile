@@ -13,6 +13,7 @@ import jwtDecode from "jwt-decode";
 import AsyncStorage from "@react-native-community/async-storage";
 import { StorageKeys } from "../../constants/constants";
 import { View, Text } from "react-native-ui-lib";
+import { colors } from "../../styles";
 
 export const App = () => {
   return (
@@ -29,36 +30,29 @@ export type TAppScreens = {
 
 const Stack = createStackNavigator<TAppScreens>();
 
-const AppBase: FC = () => {
-  const data = userContextState();
-  const [valueData, setValueData] = useState("loading");
+//TODO fix types and make hook useInitialLoad && fix
 
+const AppBase: FC = () => {
+  const [dataToken, setDataToken] = useState(null);
+  const [initialLoading, setInitialLoading] = useState(true);
+  const data = userContextState({ user: dataToken });
+  console.log(data, initialLoading);
   const initialLoad = async () => {
     const token = await AsyncStorage.getItem(StorageKeys.Token);
-    setValueData({ ...data, user: jwtDecode(token) });
+    setDataToken(token ? jwtDecode(token) : null);
+    setInitialLoading(false);
   };
   useEffect(() => void initialLoad(), []);
-  //   valueData ? (
-  //   <View flex-1 center>
-  //     <Text>loading...</Text>
-  //   </View>
-  // ) :
-  if (valueData === "loading")
-    return (
-      <View center flex>
-        <Text children="loading..." />
-      </View>
-    );
+  if (initialLoading)
+    return <View center flex backgroundColor={colors.backgroundAqua} />;
   return (
-    <UserContext.Provider value={valueData}>
+    <UserContext.Provider value={data}>
       <Stack.Navigator
         headerMode="none"
         screenOptions={{ animationEnabled: false }}
       >
-        {!valueData.user && (
-          <Stack.Screen name={ROUTES.Auth} component={Auth} />
-        )}
-        {valueData.user && <Stack.Screen name={ROUTES.Home} component={Home} />}
+        {!data.user && <Stack.Screen name={ROUTES.Auth} component={Auth} />}
+        {data.user && <Stack.Screen name={ROUTES.Home} component={Home} />}
       </Stack.Navigator>
     </UserContext.Provider>
   );

@@ -7,7 +7,7 @@ import { useCurrentUser } from "../../lib/hooks/useCurrentUser";
 
 export const Profile: FC = () => {
   const navigation = useNavigation();
-  const { user } = useCurrentUser();
+  const { user, logout } = useCurrentUser();
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
@@ -20,6 +20,7 @@ export const Profile: FC = () => {
           label="Hello Profile"
           onPress={() => navigation.navigate(BOTTOM_ROUTES.Posts)}
         />
+        <Button label="Logout" onPress={logout} />
       </View>
     </SafeAreaView>
   );
