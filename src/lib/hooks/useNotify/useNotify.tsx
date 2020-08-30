@@ -65,7 +65,7 @@ export const NotificationsProvider: React.FC = ({ children }) => {
   const hide = useCallback(() => setNotification(null), []);
 
   return (
-    <Context.Provider flex-1 value={{ error }}>
+    <Context.Provider value={{ error }}>
       <Snackbar notification={notification} onClose={hide} />
       {children}
     </Context.Provider>

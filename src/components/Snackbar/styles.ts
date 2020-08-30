@@ -22,11 +22,12 @@ export default StyleSheet.create({
   },
   snackbar: {
     borderRadius: 20,
-    paddingVertical: 10,
+    paddingVertical: 12,
     color: colors.white,
     paddingHorizontal: 30,
   },
   error: {
+    textAlign: "center",
     backgroundColor: colors.red,
   },
   push: {
@@ -35,8 +36,7 @@ export default StyleSheet.create({
   },
   text: {
     flexWrap: "wrap",
-    fontSize: 14,
-    paddingBottom: 5,
+    fontSize: 16,
   },
   notificationIcon: {
     width: 45,
