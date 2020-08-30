@@ -11,7 +11,7 @@ interface IContext {
   logout: () => void;
 }
 
-type IAuthState = Pick<IContext, "user">;
+type IAuthState = { user: User | null };
 
 export const UserContext = React.createContext<IContext>({
   user: null,
