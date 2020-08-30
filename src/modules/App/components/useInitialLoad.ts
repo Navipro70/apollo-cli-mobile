@@ -10,7 +10,7 @@ export const useInitialLoad = () => {
   const userData = userContextState();
   const initialLoad = async () => {
     const token = await AsyncStorage.getItem(StorageKeys.Token);
-    token && userData.login(jwtDecode(token));
+    if (token) userData.login(jwtDecode(token));
     SplashScreen.hide();
   };
   useEffect(() => void initialLoad(), []);
