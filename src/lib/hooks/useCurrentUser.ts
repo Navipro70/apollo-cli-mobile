@@ -48,8 +48,8 @@ function authReducer(state: IAuthState, action: TAuthReducer) {
   }
 }
 
-export function userContextState(initialState): IContext {
-  const [state, dispatch] = useReducer(authReducer, initialState);
+export function userContextState(): IContext {
+  const [state, dispatch] = useReducer(authReducer, { user: null });
   function login(userData: User) {
     dispatch({
       type: AuthReducer.Login,
