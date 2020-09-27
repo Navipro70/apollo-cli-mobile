@@ -1,35 +1,33 @@
-import React, { useContext, useReducer } from "react";
-import { User } from "../../generated/graphql";
-import { TAuthReducer } from "../../types";
-import { AuthReducer } from "../../constants/reducers";
-import { StorageKeys } from "../../constants/constants";
-import AsyncStorage from "@react-native-community/async-storage";
+import React, { useContext, useReducer } from 'react'
+import { User } from '../../generated/graphql'
+import { TAuthReducer } from '../../types'
+import { AuthReducer } from '../../constants/reducers'
+import { StorageKeys } from '../../constants/constants'
+import AsyncStorage from '@react-native-community/async-storage'
 
 interface IContext {
-  user: User | null;
-  login: (userData: User) => void;
-  logout: () => void;
+  user: User | null
+  login: (userData: User) => void
+  logout: () => void
 }
 
-type IAuthState = { user: User | null };
+type IAuthState = { user: User | null }
 
 export const UserContext = React.createContext<IContext>({
   user: null,
-  login: (data) => {},
+  login: (_data) => {},
   logout: () => {},
-});
+})
 
 export const useCurrentUser = () => {
-  const value = useContext(UserContext);
+  const value = useContext(UserContext)
 
   if (value === undefined) {
-    throw new Error(
-      "useCurrentUser can only be used inside a CurrentUserProvider"
-    );
+    throw new Error('useCurrentUser can only be used inside a CurrentUserProvider')
   }
 
-  return value;
-};
+  return value
+}
 
 function authReducer(state: IAuthState, action: TAuthReducer) {
   switch (action.type) {
@@ -37,36 +35,36 @@ function authReducer(state: IAuthState, action: TAuthReducer) {
       return {
         ...state,
         user: action.payload,
-      };
+      }
     case AuthReducer.Logout:
       return {
         ...state,
         user: null,
-      };
+      }
     default:
-      return state;
+      return state
   }
 }
 
 export function userContextState(): IContext {
-  const [state, dispatch] = useReducer(authReducer, { user: null });
+  const [state, dispatch] = useReducer(authReducer, { user: null })
   function login(userData: User) {
     dispatch({
       type: AuthReducer.Login,
       payload: userData,
-    });
+    })
   }
 
   async function logout() {
-    await AsyncStorage.removeItem(StorageKeys.Token);
+    await AsyncStorage.removeItem(StorageKeys.Token)
     dispatch({
       type: AuthReducer.Logout,
-    });
+    })
   }
 
   return {
     login,
     logout,
     user: state.user,
-  };
+  }
 }

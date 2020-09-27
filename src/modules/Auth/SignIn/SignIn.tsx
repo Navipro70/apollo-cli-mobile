@@ -34,8 +34,7 @@ export const SingIn = ({ navigation }: Props) => {
         user.login(data.login);
       }
     } catch (err) {
-      const [_, messageError] = extractServerError(err);
-      setGeneralError(messageError as string);
+      notify.error(err);
     }
   };
 

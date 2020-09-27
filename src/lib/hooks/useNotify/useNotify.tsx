@@ -52,11 +52,9 @@ export const NotificationsProvider: React.FC = ({ children }) => {
   };
 
   const error = (error: any, text?: string) => {
-    console.error(error);
-
     const snackbarNotification = {
       show: true,
-      text: text ?? extractGraphQLError(error),
+      text: text ?? extractGraphQLError(error) ?? "Unexpected error occurred",
     };
 
     show(snackbarNotification, ERROR_TIME_OPEN);
