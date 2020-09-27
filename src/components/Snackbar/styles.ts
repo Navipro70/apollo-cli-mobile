@@ -1,9 +1,10 @@
-import { StyleSheet } from "react-native";
-import { colors } from "../../styles";
+import { StyleSheet } from 'react-native'
+
+import { colors } from '~/styles'
 
 export default StyleSheet.create({
   root: {
-    justifyContent: "flex-start",
+    justifyContent: 'flex-start',
     marginTop: 50,
     marginHorizontal: 15,
     shadowColor: colors.gray,
@@ -27,7 +28,7 @@ export default StyleSheet.create({
     paddingHorizontal: 30,
   },
   error: {
-    textAlign: "center",
+    textAlign: 'center',
     backgroundColor: colors.red,
   },
   push: {
@@ -35,11 +36,11 @@ export default StyleSheet.create({
     paddingLeft: 0,
   },
   text: {
-    flexWrap: "wrap",
+    flexWrap: 'wrap',
     fontSize: 16,
   },
   notificationIcon: {
     width: 45,
     height: 45,
   },
-});
+})

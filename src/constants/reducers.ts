@@ -1,4 +1,4 @@
 export enum AuthReducer {
-  Login = "LOGIN",
-  Logout = "LOGOUT",
+  Login = 'LOGIN',
+  Logout = 'LOGOUT',
 }

@@ -1,10 +1,8 @@
-import {
-  useNavigation as useUntypedNavigation,
-  NavigationProp,
-} from "@react-navigation/native";
+// eslint-disable-next-line no-restricted-imports
+import { useNavigation as useUntypedNavigation, NavigationProp } from '@react-navigation/native'
 
-import { Screens, Routes } from "./screens";
+import { Screens, Routes } from './screens'
 
 export const useNavigation = () => {
-  return useUntypedNavigation<NavigationProp<Screens, Routes>>();
-};
+  return useUntypedNavigation<NavigationProp<Screens, Routes>>()
+}

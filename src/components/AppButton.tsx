@@ -1,7 +1,9 @@
 import React, { FC } from 'react'
 import { StyleSheet, TouchableOpacity, Text, View, TouchableOpacityProps } from 'react-native'
-import { Spinner } from './Progress'
+
 import { colors } from '../styles'
+
+import { Spinner } from './Progress'
 
 interface TProps extends TouchableOpacityProps {
   onPress: () => void
@@ -20,14 +22,14 @@ export const AppButton: FC<TProps> = ({
   ...rest
 }) => (
   <TouchableOpacity
-    onPress={onPress}
     activeOpacity={0.5}
     disabled={loading}
     style={styles.container}
+    onPress={onPress}
     {...rest}
   >
-    {loading && <Spinner size={30} color={colors.red} style={spinnerStyle} />}
-    <View style={[styles.appButtonWrapper, style, loading && { opacity: 0.2 }]}>
+    {loading && <Spinner color={colors.red} size={30} style={spinnerStyle} />}
+    <View style={[styles.appButtonWrapper, style, loading && styles.loadingOpacity]}>
       <Text style={styles.appButtonText}>{title}</Text>
     </View>
   </TouchableOpacity>
@@ -42,16 +44,19 @@ const styles = StyleSheet.create({
   appButtonWrapper: {
     elevation: 8,
     height: 60,
-    backgroundColor: '#0190F9',
+    backgroundColor: colors.aqua,
     borderRadius: 30,
     alignItems: 'center',
     justifyContent: 'center',
   },
   appButtonText: {
     fontSize: 18,
-    color: '#fff',
+    color: colors.white,
     fontWeight: 'bold',
     alignSelf: 'center',
     textTransform: 'uppercase',
+  },
+  loadingOpacity: {
+    opacity: 0.2,
   },
 })

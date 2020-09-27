@@ -1,12 +1,11 @@
-import React from "react";
-import { Text, View } from "react-native-ui-lib";
+import React from 'react'
+import { Text, View } from 'react-native-ui-lib'
 
-import { AppNotification } from "./Snackbar";
-
-import styles from "./styles";
+import { AppNotification } from './Snackbar'
+import styles from './styles'
 
 interface Props {
-  notification: AppNotification | null;
+  notification: AppNotification | null
 }
 
 export const ErrorSnackbarContent = ({ notification }: Props) => {
@@ -17,9 +16,7 @@ export const ErrorSnackbarContent = ({ notification }: Props) => {
           {notification?.title}
         </Text>
       ) : null}
-      <Text style={[styles.text, notification && styles.error]}>
-        {notification?.text}
-      </Text>
+      <Text style={[styles.text, notification && styles.error]}>{notification?.text}</Text>
     </View>
-  );
-};
+  )
+}

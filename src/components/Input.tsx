@@ -1,17 +1,19 @@
-import React, { useState } from "react";
-import { TextField, View } from "react-native-ui-lib";
-import { StyleSheet } from "react-native";
-import Icon from "react-native-vector-icons/MaterialCommunityIcons";
-import { TextFieldProps } from "react-native-ui-lib/typings";
+import React, { useState } from 'react'
+import { StyleSheet } from 'react-native'
+import { TextField, View } from 'react-native-ui-lib'
+import { TextFieldProps } from 'react-native-ui-lib/typings'
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
+
+import { colors } from '~/styles'
 
 interface Props extends TextFieldProps {
-  value: string;
-  onChangeText: (text: string) => void;
-  color?: string;
-  error?: string;
-  inputIcon?: string;
-  style?: object;
-  secure?: boolean;
+  value: string
+  onChangeText: (text: string) => void
+  color?: string
+  error?: string
+  inputIcon?: string
+  style?: object
+  secure?: boolean
 }
 
 export const Input = ({
@@ -24,58 +26,51 @@ export const Input = ({
   error,
   ...rest
 }: Props) => {
-  const [securePassword, setSecurePassword] = useState<boolean>(
-    secure ?? false
-  );
-  let iconName: string = securePassword ? "eye-off-outline" : "eye-outline";
+  const [securePassword, setSecurePassword] = useState<boolean>(secure ?? false)
+  let iconName: string = securePassword ? 'eye-off-outline' : 'eye-outline'
 
   return (
-    <View row centerV marginV-5>
+    <View centerV marginV-5 row>
       {Boolean(inputIcon) && (
-        <Icon
-          style={styles.inputIcon}
-          name={inputIcon as string}
-          size={35}
-          color={color}
-        />
+        <Icon color={color} name={inputIcon as string} size={35} style={styles.inputIcon} />
       )}
       <TextField
-        onChangeText={onChangeText}
-        value={value}
-        style={[styles.textField, style]}
-        secureTextEntry={securePassword}
-        color={color}
-        error={error}
         autoCapitalize="none"
         autoCorrect={false}
+        color={color}
+        error={error}
+        secureTextEntry={securePassword}
+        style={[styles.textField, style]}
+        value={value}
+        onChangeText={onChangeText}
         {...rest}
       />
-      <View right centerV>
+      <View centerV marginB-5 right>
         {secure && (
           <Icon
+            color={color}
+            name={iconName}
+            size={35}
             style={styles.visibleIcon}
             onPress={() => setSecurePassword((prevState) => !prevState)}
-            name={iconName}
-            size={30}
-            color={color}
           />
         )}
       </View>
     </View>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   textField: {
     fontSize: 20,
-    color: "#fff",
+    color: colors.white,
   },
   inputIcon: {
     paddingRight: 10,
     marginBottom: 30,
   },
   visibleIcon: {
-    position: "absolute",
+    position: 'absolute',
     paddingBottom: 30,
   },
-});
+})

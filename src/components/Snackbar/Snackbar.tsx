@@ -1,21 +1,21 @@
-import React from "react";
-import Modal from "react-native-modal";
+import React from 'react'
+import Modal from 'react-native-modal'
 
-import { ErrorSnackbarContent } from "./ErrorSnackbarContent";
-import styles from "./styles";
+import { ErrorSnackbarContent } from './ErrorSnackbarContent'
+import styles from './styles'
 
-export const SNACKBAR_ANIMATION_OUT_TIMING = 500;
+export const SNACKBAR_ANIMATION_OUT_TIMING = 500
 
 export type AppNotification = {
-  show: boolean;
-  text: string;
-  title?: string;
-  onClick?: () => void;
-};
+  show: boolean
+  text: string
+  title?: string
+  onClick?: () => void
+}
 
 interface Props {
-  notification: AppNotification | null;
-  onClose: () => void;
+  notification: AppNotification | null
+  onClose: () => void
 }
 
 export const Snackbar: React.FC<Props> = ({ notification, onClose }) => {
@@ -29,14 +29,12 @@ export const Snackbar: React.FC<Props> = ({ notification, onClose }) => {
       hasBackdrop={false}
       isVisible={Boolean(notification)}
       style={styles.root}
-      swipeDirection={["up"]}
+      swipeDirection={['up']}
       swipeThreshold={30}
       onModalHide={onClose}
       onSwipeComplete={onClose}
     >
-      {notification?.show && (
-        <ErrorSnackbarContent notification={notification} />
-      )}
+      {notification?.show && <ErrorSnackbarContent notification={notification} />}
     </Modal>
-  );
-};
+  )
+}

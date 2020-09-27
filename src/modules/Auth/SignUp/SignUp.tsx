@@ -1,6 +1,6 @@
 import AsyncStorage from '@react-native-community/async-storage'
 import { StackNavigationProp } from '@react-navigation/stack'
-import React from 'react'
+import React, { useCallback } from 'react'
 
 import { StorageKeys } from '~/constants/constants'
 import { AUTH_ROUTES as ROUTES } from '~/constants/routes'
@@ -18,7 +18,7 @@ interface Props {
   navigation: StackNavigationProp<TAuthScreens, ROUTES.SignUp>
 }
 
-export const SignUp = ({ navigation }: Props) => {
+export const SignUp = ({ navigation: { navigate } }: Props) => {
   const notify = useNotify()
 
   const [addUser, { loading }] = useRegisterUserMutation()
@@ -41,7 +41,7 @@ export const SignUp = ({ navigation }: Props) => {
     }
   }
 
-  const signInHandler = () => navigation.navigate(ROUTES.SignIn)
+  const signInHandler = useCallback(() => navigate(ROUTES.SignIn), [navigate])
 
   return <SignUpView loading={loading} signInHandler={signInHandler} onSubmit={onSubmit} />
 }
