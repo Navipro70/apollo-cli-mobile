@@ -1,6 +1,6 @@
 import { FormikHelpers } from 'formik'
 
-import { AuthReducer } from './constants/reducers'
+import { AuthReducer } from './constants'
 import { MutationLoginArgs, RegisterInput, User } from './generated/graphql'
 
 //Formik
