@@ -16,10 +16,9 @@ interface Props {
   loading: boolean
   signUpHandler: () => void
   onSubmit: TSignInFormik
-  generalError: string
 }
 
-export const SignInView = ({ onSubmit, signUpHandler, loading, generalError }: Props) => {
+export const SignInView = ({ onSubmit, signUpHandler, loading }: Props) => {
   const formik = useFormik({
     initialValues: {
       username: '',
@@ -63,9 +62,6 @@ export const SignInView = ({ onSubmit, signUpHandler, loading, generalError }: P
             onFocus={() => formik.setFieldTouched('password', false)}
             onSubmitEditing={() => formik.handleSubmit()}
           />
-          <View center>
-            <Text children={generalError} style={styles.generalError} />
-          </View>
         </View>
         <View center marginB-10>
           <AppButton

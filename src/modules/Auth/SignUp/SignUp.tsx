@@ -34,10 +34,9 @@ export const SignUp = ({ navigation: { navigate } }: Props) => {
         login(data.register)
       }
     } catch (err) {
-      notify.error(err)
       const [fieldError, messageError] = extractServerError(err)
-      if (fieldError && messageError)
-        formikBag.setFieldError(fieldError as string, messageError as string)
+      if (fieldError && messageError) formikBag.setFieldError(fieldError, messageError)
+      else notify.error(err)
     }
   }
 

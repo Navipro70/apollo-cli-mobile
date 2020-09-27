@@ -1,6 +1,6 @@
 import AsyncStorage from '@react-native-community/async-storage'
 import { StackNavigationProp } from '@react-navigation/stack'
-import React, { useCallback, useState } from 'react'
+import React, { useCallback } from 'react'
 
 import { StorageKeys } from '~/constants'
 import { AUTH_ROUTES as ROUTES } from '~/constants'
@@ -24,10 +24,8 @@ export const SingIn = ({ navigation: { navigate } }: Props) => {
 
   const [loginUser, { loading }] = useLoginUserMutation()
   const { login } = useRegister()
-  const [generalError, setGeneralError] = useState('')
 
   const onSubmit: TSignInFormik = async (values) => {
-    setGeneralError('')
     try {
       const { data } = await loginUser({
         variables: values,
@@ -41,12 +39,5 @@ export const SingIn = ({ navigation: { navigate } }: Props) => {
     }
   }
 
-  return (
-    <SignInView
-      generalError={generalError}
-      loading={loading}
-      signUpHandler={signUpHandler}
-      onSubmit={onSubmit}
-    />
-  )
+  return <SignInView loading={loading} signUpHandler={signUpHandler} onSubmit={onSubmit} />
 }
