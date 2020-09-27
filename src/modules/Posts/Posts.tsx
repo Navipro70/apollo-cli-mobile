@@ -1,26 +1,36 @@
-import React from "react";
-import {SafeAreaView} from 'react-native'
-import {Post, useFetchAllPostsQuery} from "../../generated/graphql";
-import {FlatList, ListRenderItem} from "react-native";
-import {PostItem} from "../../components/PostItem";
-import {Spinner} from "../../components/Progress";
+import React, { useCallback } from 'react'
+import { SafeAreaView, StyleSheet, FlatList, ListRenderItem } from 'react-native'
+
+import { PostItem, Spinner } from '~/components'
+import { Post, useFetchAllPostsQuery } from '~/generated/graphql'
 
 export const Posts = () => {
-    const {loading, data} = useFetchAllPostsQuery()
+  const { loading, data } = useFetchAllPostsQuery()
 
-    if (loading) return <Spinner style={{flex: 1}} size={50} />
-    const renderItem: ListRenderItem<Post> = ({item}) => {
-        return (<PostItem onPress={() => console.log('qwe')} postItem={item} />)
-    }
+  const renderItem: ListRenderItem<Post> = useCallback(
+    ({ item }) => <PostItem postItem={item} onPress={() => {}} />,
+    [],
+  )
 
-    return (
-        <SafeAreaView>
-                <FlatList
-                    style={{padding: 10}}
-                    data={data?.getPosts as Post[]}
-                    renderItem={renderItem}
-                    keyExtractor={item => item.id}
-                />
-        </SafeAreaView>
-    );
+  if (loading) return <Spinner size={50} style={styles.spinner} />
+  //TODO add ItemSeparator
+  return (
+    <SafeAreaView>
+      <FlatList
+        data={data?.getPosts as Post[]}
+        keyExtractor={(item) => item.id}
+        renderItem={renderItem}
+        style={styles.flatList}
+      />
+    </SafeAreaView>
+  )
 }
+
+const styles = StyleSheet.create({
+  flatList: {
+    padding: 10,
+  },
+  spinner: {
+    flex: 1,
+  },
+})

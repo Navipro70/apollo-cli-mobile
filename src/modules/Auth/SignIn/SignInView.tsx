@@ -5,10 +5,10 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { View, Text } from 'react-native-ui-lib'
 
-import { AppButton } from '~/components/AppButton'
-import { Input } from '~/components/Input'
-import { signInValidator } from '~/constants/validatiors'
-import { i18n } from '~/i18n/i18n'
+import { AppButton } from '~/components'
+import { Input } from '~/components'
+import { signInValidator } from '~/constants'
+import { i18n } from '~/i18n'
 import { colors } from '~/styles'
 import { TSignInFormik } from '~/types'
 

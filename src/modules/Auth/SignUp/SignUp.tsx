@@ -2,12 +2,12 @@ import AsyncStorage from '@react-native-community/async-storage'
 import { StackNavigationProp } from '@react-navigation/stack'
 import React, { useCallback } from 'react'
 
-import { StorageKeys } from '~/constants/constants'
-import { AUTH_ROUTES as ROUTES } from '~/constants/routes'
+import { StorageKeys } from '~/constants'
+import { AUTH_ROUTES as ROUTES } from '~/constants'
 import { useRegisterUserMutation } from '~/generated/graphql'
-import { extractServerError } from '~/lib/hooks/extractServerGraphQLError'
-import { useCurrentUser } from '~/lib/hooks/useCurrentUser'
-import { useNotify } from '~/lib/hooks/useNotify/useNotify'
+import { extractServerError } from '~/lib/hooks'
+import { useRegister } from '~/lib/hooks'
+import { useNotify } from '~/lib/hooks'
 import { TSignUpFormik } from '~/types'
 
 import { TAuthScreens } from '../Auth'
@@ -22,7 +22,7 @@ export const SignUp = ({ navigation: { navigate } }: Props) => {
   const notify = useNotify()
 
   const [addUser, { loading }] = useRegisterUserMutation()
-  const user = useCurrentUser()
+  const { login } = useRegister()
 
   const onSubmit: TSignUpFormik = async (values, formikBag) => {
     try {
@@ -31,7 +31,7 @@ export const SignUp = ({ navigation: { navigate } }: Props) => {
       })
       if (data) {
         await AsyncStorage.setItem(StorageKeys.Token, data.register.token)
-        user.login(data.register)
+        login(data.register)
       }
     } catch (err) {
       notify.error(err)

@@ -15,21 +15,19 @@ export type TBottomScreens = {
 
 const { Navigator, Screen } = createBottomTabNavigator<TBottomScreens>()
 
-export const Tabs = () => {
-  return (
-    <Navigator
-      screenOptions={({ route }) => ({
-        tabBarIcon: ({ color, size }) => {
-          let iconName: string = 'home'
-          if (route.name === 'Home') iconName = 'home'
-          else if (route.name === 'Profile') iconName = 'profile'
-          return <Icon color={color} name={iconName} size={size} />
-        },
-      })}
-      tabBarOptions={tabBarOptions}
-    >
-      <Screen component={Posts} name={ROUTES.Posts} />
-      <Screen component={Profile} name={ROUTES.Profile} />
-    </Navigator>
-  )
-}
+export const Tabs = () => (
+  <Navigator
+    screenOptions={({ route }) => ({
+      tabBarIcon: ({ color, size }) => {
+        let iconName: string = 'home'
+        if (route.name === 'Home') iconName = 'home'
+        else if (route.name === 'Profile') iconName = 'profile'
+        return <Icon color={color} name={iconName} size={size} />
+      },
+    })}
+    tabBarOptions={tabBarOptions}
+  >
+    <Screen component={Posts} name={ROUTES.Posts} />
+    <Screen component={Profile} name={ROUTES.Profile} />
+  </Navigator>
+)

@@ -1,10 +1,10 @@
 import { createStackNavigator } from '@react-navigation/stack'
 import React from 'react'
 
-import { AUTH_ROUTES } from '~/constants/routes'
+import { AUTH_ROUTES } from '~/constants'
 
-import { SingIn } from './SignIn/SignIn'
-import { SignUp } from './SignUp/SignUp'
+import { SingIn } from './SignIn'
+import { SignUp } from './SignUp'
 
 export type TAuthScreens = {
   [AUTH_ROUTES.SignIn]: undefined

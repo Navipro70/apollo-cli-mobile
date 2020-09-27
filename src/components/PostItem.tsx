@@ -13,29 +13,26 @@ interface Props extends TouchableOpacityProps {
   postItem: Post
   onPress: () => void
 }
-
-export const PostItem: FC<Props> = ({ postItem, onPress, ...rest }) => {
-  dayjs.extend(relativeTime)
-  return (
-    <TouchableOpacity onPress={onPress} {...rest}>
-      <View marginV-15 padding-15 spread style={styles.postView}>
-        <Text children={postItem.username} style={styles.username} />
-        <Text children={dayjs(postItem.createdAt).fromNow()} style={styles.date} />
-        <Text children={postItem.body} style={styles.body} />
-        <View row spread>
-          <View center paddingR-10 row style={styles.buttonGroup}>
-            <TouchableOpacity children={<Icon name="like" size={40} />} />
-            <Text children={postItem?.commentCount || 0} />
-          </View>
-          <View center paddingL-10 row style={styles.buttonGroup}>
-            <Text children={postItem.commentCount} />
-            <TouchableOpacity children={<Icon name="comment" size={40} />} />
-          </View>
+dayjs.extend(relativeTime)
+export const PostItem: FC<Props> = ({ postItem, onPress, ...rest }) => (
+  <TouchableOpacity onPress={onPress} {...rest}>
+    <View marginV-15 padding-15 spread style={styles.postView}>
+      <Text children={postItem.username} style={styles.username} />
+      <Text children={dayjs(postItem.createdAt).fromNow()} style={styles.date} />
+      <Text children={postItem.body} style={styles.body} />
+      <View row spread>
+        <View center paddingR-10 row style={styles.buttonGroup}>
+          <TouchableOpacity children={<Icon name="like" size={40} />} />
+          <Text children={postItem?.commentCount || 0} />
+        </View>
+        <View center paddingL-10 row style={styles.buttonGroup}>
+          <Text children={postItem.commentCount} />
+          <TouchableOpacity children={<Icon name="comment" size={40} />} />
         </View>
       </View>
-    </TouchableOpacity>
-  )
-}
+    </View>
+  </TouchableOpacity>
+)
 
 const styles = StyleSheet.create({
   postView: {

@@ -3,8 +3,8 @@ import jwtDecode from 'jwt-decode'
 import { useCallback, useEffect } from 'react'
 import SplashScreen from 'react-native-splash-screen'
 
-import { StorageKeys } from '../../../constants/constants'
-import { userContextState } from '../../../lib/hooks/useCurrentUser'
+import { StorageKeys } from '~/constants'
+import { userContextState } from '~/lib/hooks'
 
 export const useInitialLoad = () => {
   const userData = userContextState()

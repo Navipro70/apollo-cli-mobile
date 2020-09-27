@@ -2,11 +2,11 @@ import AsyncStorage from '@react-native-community/async-storage'
 import { StackNavigationProp } from '@react-navigation/stack'
 import React, { useCallback, useState } from 'react'
 
-import { StorageKeys } from '~/constants/constants'
-import { AUTH_ROUTES as ROUTES } from '~/constants/routes'
+import { StorageKeys } from '~/constants'
+import { AUTH_ROUTES as ROUTES } from '~/constants'
 import { useLoginUserMutation } from '~/generated/graphql'
-import { useCurrentUser } from '~/lib/hooks/useCurrentUser'
-import { useNotify } from '~/lib/hooks/useNotify/useNotify'
+import { useRegister } from '~/lib/hooks'
+import { useNotify } from '~/lib/hooks'
 import { TSignInFormik } from '~/types'
 
 import { TAuthScreens } from '../Auth'
@@ -23,7 +23,7 @@ export const SingIn = ({ navigation: { navigate } }: Props) => {
   const notify = useNotify()
 
   const [loginUser, { loading }] = useLoginUserMutation()
-  const user = useCurrentUser()
+  const { login } = useRegister()
   const [generalError, setGeneralError] = useState('')
 
   const onSubmit: TSignInFormik = async (values) => {
@@ -34,7 +34,7 @@ export const SingIn = ({ navigation: { navigate } }: Props) => {
       })
       if (data) {
         await AsyncStorage.setItem(StorageKeys.Token, data.login.token)
-        user.login(data.login)
+        login(data.login)
       }
     } catch (err) {
       notify.error(err)
