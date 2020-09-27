@@ -3,7 +3,7 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '10.0'
 
-target 'NavigationApp' do
+target 'Astronomy' do
   config = use_native_modules!
 
   use_react_native!(:path => config["reactNativePath"])
@@ -12,7 +12,7 @@ target 'NavigationApp' do
 
   pod 'ReactNativeART', :path => '../node_modules/@react-native-community/art'
 
-  target 'NavigationAppTests' do
+  target 'AstronomyTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -27,10 +27,10 @@ target 'NavigationApp' do
   end
 end
 
-target 'NavigationApp-tvOS' do
-  # Pods for NavigationApp-tvOS
+target 'Astronomy-tvOS' do
+  # Pods for Astronomy-tvOS
 
-  target 'NavigationApp-tvOSTests' do
+  target 'Astronomy-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end

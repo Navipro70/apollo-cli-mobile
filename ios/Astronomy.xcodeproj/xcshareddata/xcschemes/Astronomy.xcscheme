@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "NavigationApp.app"
-               BlueprintName = "NavigationApp"
-               ReferencedContainer = "container:NavigationApp.xcodeproj">
+               BuildableName = "Astronomy.app"
+               BlueprintName = "Astronomy"
+               ReferencedContainer = "container:Astronomy.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "NavigationAppTests.xctest"
-               BlueprintName = "NavigationAppTests"
-               ReferencedContainer = "container:NavigationApp.xcodeproj">
+               BuildableName = "AstronomyTests.xctest"
+               BlueprintName = "AstronomyTests"
+               ReferencedContainer = "container:Astronomy.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "NavigationApp.app"
-            BlueprintName = "NavigationApp"
-            ReferencedContainer = "container:NavigationApp.xcodeproj">
+            BuildableName = "Astronomy.app"
+            BlueprintName = "Astronomy"
+            ReferencedContainer = "container:Astronomy.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "NavigationApp.app"
-            BlueprintName = "NavigationApp"
-            ReferencedContainer = "container:NavigationApp.xcodeproj">
+            BuildableName = "Astronomy.app"
+            BlueprintName = "Astronomy"
+            ReferencedContainer = "container:Astronomy.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -1,4 +1,4 @@
-package com.navigationapp;
+package com.astronomy;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "NavigationApp";
+    return "Astronomy";
   }
 }

@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* NavigationAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* NavigationAppTests.m */; };
+		00E356F31AD99517003FC87E /* AstronomyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AstronomyTests.m */; };
 		030088831D29417CA677309D /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DE059E22AB841B2B71A57F2 /* Entypo.ttf */; };
 		03AD29AB0F154623AC884675 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B4FA5C3254E49C28258292E /* SimpleLineIcons.ttf */; };
 		051A98CA55CE4672B4190EB5 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE732364AA1F474B8F68CB3B /* FontAwesome.ttf */; };
-		054D5BAC66B4411280EEDF42 /* libPods-NavigationApp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93CF2B98358D62F6A0AFE551 /* libPods-NavigationApp-tvOS.a */; };
+		054D5BAC66B4411280EEDF42 /* libPods-Astronomy-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93CF2B98358D62F6A0AFE551 /* libPods-Astronomy-tvOS.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		1A6B093D7E493EB54960D15C /* libPods-NavigationApp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCE5F4CC4FCA05A60E1BCFA /* libPods-NavigationApp-tvOSTests.a */; };
+		1A6B093D7E493EB54960D15C /* libPods-Astronomy-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCE5F4CC4FCA05A60E1BCFA /* libPods-Astronomy-tvOSTests.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2DCD954D1E0B4F2C00145EB5 /* NavigationAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* NavigationAppTests.m */; };
+		2DCD954D1E0B4F2C00145EB5 /* AstronomyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AstronomyTests.m */; };
 		52156CB402A246BC9C1FB889 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6EA1CAAA35148FE9283F3F7 /* Foundation.ttf */; };
 		5FF8FC96127141F3BA24C972 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A579838E4344E9DB578D636 /* FontAwesome5_Brands.ttf */; };
 		650974B7C5F0414B991AB3CB /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A35964D166F04BF49083C424 /* Zocial.ttf */; };
@@ -29,12 +29,12 @@
 		7C41335AC6E54B608528FCEF /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8B327BDAE1242EEB72AEBFC /* Feather.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		81C604C947BA429FA6519746 /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9D2B7F063F54A9E9DE8326D /* FontAwesome5_Solid.ttf */; };
-		8A0FB1E5D7537400A61E1BF4 /* libPods-NavigationApp-NavigationAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B62427BD38D1816EA43F5625 /* libPods-NavigationApp-NavigationAppTests.a */; };
+		8A0FB1E5D7537400A61E1BF4 /* libPods-Astronomy-AstronomyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B62427BD38D1816EA43F5625 /* libPods-Astronomy-AstronomyTests.a */; };
 		9A72EAD2D1C84A82A794E633 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1998ED0B2F245E0B6C325D9 /* Ionicons.ttf */; };
 		A81215E40BA3423F9C2B7237 /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CDAEFF36D404967B4594575 /* Fontisto.ttf */; };
 		A8BA88B6FFFF47539322ACE2 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0809F17AF3F64C5E8CB7C953 /* Octicons.ttf */; };
 		CBF082DA7154423FA0C784CE /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 86583272DFFA4C59B2ED5017 /* MaterialCommunityIcons.ttf */; };
-		E5201A3446B20BBA94723078 /* libPods-NavigationApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A834274C19B72BCC1FE1F84F /* libPods-NavigationApp.a */; };
+		E5201A3446B20BBA94723078 /* libPods-Astronomy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A834274C19B72BCC1FE1F84F /* libPods-Astronomy.a */; };
 		EA45F1A666CF407291135D47 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5FBBBF5CF42341FE8FD6B75A /* EvilIcons.ttf */; };
 /* End PBXBuildFile section */
 
@@ -44,61 +44,61 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = NavigationApp;
+			remoteInfo = Astronomy;
 		};
 		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
-			remoteInfo = "NavigationApp-tvOS";
+			remoteInfo = "Astronomy-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* NavigationAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NavigationAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* AstronomyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AstronomyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* NavigationAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationAppTests.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* AstronomyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AstronomyTests.m; sourceTree = "<group>"; };
 		02705A7CB25046FE8792F90E /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		0809F17AF3F64C5E8CB7C953 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		0CDAEFF36D404967B4594575 /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* NavigationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = NavigationApp/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = NavigationApp/AppDelegate.m; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = NavigationApp/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = NavigationApp/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = NavigationApp/main.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* Astronomy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Astronomy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Astronomy/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Astronomy/AppDelegate.m; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Astronomy/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Astronomy/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Astronomy/main.m; sourceTree = "<group>"; };
 		1B4FA5C3254E49C28258292E /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
-		2D02E47B1E0B4A5D006451C7 /* NavigationApp-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NavigationApp-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* NavigationApp-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NavigationApp-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D3F45107ECFA2F9ED4740C6 /* Pods-NavigationApp-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NavigationApp-tvOS.release.xcconfig"; path = "Target Support Files/Pods-NavigationApp-tvOS/Pods-NavigationApp-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		322D86861EC8F1C3B1B61175 /* Pods-NavigationApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NavigationApp.debug.xcconfig"; path = "Target Support Files/Pods-NavigationApp/Pods-NavigationApp.debug.xcconfig"; sourceTree = "<group>"; };
-		4E3F19A8A481E95B7EA6B29D /* Pods-NavigationApp-NavigationAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NavigationApp-NavigationAppTests.release.xcconfig"; path = "Target Support Files/Pods-NavigationApp-NavigationAppTests/Pods-NavigationApp-NavigationAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		2D02E47B1E0B4A5D006451C7 /* Astronomy-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Astronomy-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* Astronomy-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Astronomy-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D3F45107ECFA2F9ED4740C6 /* Pods-Astronomy-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Astronomy-tvOS.release.xcconfig"; path = "Target Support Files/Pods-Astronomy-tvOS/Pods-Astronomy-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		322D86861EC8F1C3B1B61175 /* Pods-Astronomy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Astronomy.debug.xcconfig"; path = "Target Support Files/Pods-Astronomy/Pods-Astronomy.debug.xcconfig"; sourceTree = "<group>"; };
+		4E3F19A8A481E95B7EA6B29D /* Pods-Astronomy-AstronomyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Astronomy-AstronomyTests.release.xcconfig"; path = "Target Support Files/Pods-Astronomy-AstronomyTests/Pods-Astronomy-AstronomyTests.release.xcconfig"; sourceTree = "<group>"; };
 		5FBBBF5CF42341FE8FD6B75A /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		5FDA61A5378745F597E94DFC /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
-		76B5F710B63E1CB50770895A /* Pods-NavigationApp-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NavigationApp-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-NavigationApp-tvOS/Pods-NavigationApp-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		7B60445D860CE8208EBC5134 /* Pods-NavigationApp-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NavigationApp-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-NavigationApp-tvOSTests/Pods-NavigationApp-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = NavigationApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		76B5F710B63E1CB50770895A /* Pods-Astronomy-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Astronomy-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-Astronomy-tvOS/Pods-Astronomy-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		7B60445D860CE8208EBC5134 /* Pods-Astronomy-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Astronomy-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-Astronomy-tvOSTests/Pods-Astronomy-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Astronomy/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86583272DFFA4C59B2ED5017 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		8A579838E4344E9DB578D636 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
-		93CF2B98358D62F6A0AFE551 /* libPods-NavigationApp-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NavigationApp-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		985CE2F63B64E61B27C73497 /* Pods-NavigationApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NavigationApp.release.xcconfig"; path = "Target Support Files/Pods-NavigationApp/Pods-NavigationApp.release.xcconfig"; sourceTree = "<group>"; };
-		99F9C3008ADB79469D38872D /* Pods-NavigationApp-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NavigationApp-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-NavigationApp-tvOSTests/Pods-NavigationApp-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		93CF2B98358D62F6A0AFE551 /* libPods-Astronomy-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Astronomy-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		985CE2F63B64E61B27C73497 /* Pods-Astronomy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Astronomy.release.xcconfig"; path = "Target Support Files/Pods-Astronomy/Pods-Astronomy.release.xcconfig"; sourceTree = "<group>"; };
+		99F9C3008ADB79469D38872D /* Pods-Astronomy-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Astronomy-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-Astronomy-tvOSTests/Pods-Astronomy-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		9DE059E22AB841B2B71A57F2 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		A35964D166F04BF49083C424 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
-		A834274C19B72BCC1FE1F84F /* libPods-NavigationApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NavigationApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B62427BD38D1816EA43F5625 /* libPods-NavigationApp-NavigationAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NavigationApp-NavigationAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A834274C19B72BCC1FE1F84F /* libPods-Astronomy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Astronomy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B62427BD38D1816EA43F5625 /* libPods-Astronomy-AstronomyTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Astronomy-AstronomyTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B91E65CF32E847CFAD9F7BE6 /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
 		C6EA1CAAA35148FE9283F3F7 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		C9D2B7F063F54A9E9DE8326D /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
 		D1998ED0B2F245E0B6C325D9 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
-		DCCE5F4CC4FCA05A60E1BCFA /* libPods-NavigationApp-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NavigationApp-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCCE5F4CC4FCA05A60E1BCFA /* libPods-Astronomy-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Astronomy-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE732364AA1F474B8F68CB3B /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		F8B327BDAE1242EEB72AEBFC /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
-		FCE0951345B4155A85C66036 /* Pods-NavigationApp-NavigationAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NavigationApp-NavigationAppTests.debug.xcconfig"; path = "Target Support Files/Pods-NavigationApp-NavigationAppTests/Pods-NavigationApp-NavigationAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FCE0951345B4155A85C66036 /* Pods-Astronomy-AstronomyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Astronomy-AstronomyTests.debug.xcconfig"; path = "Target Support Files/Pods-Astronomy-AstronomyTests/Pods-Astronomy-AstronomyTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A0FB1E5D7537400A61E1BF4 /* libPods-NavigationApp-NavigationAppTests.a in Frameworks */,
+				8A0FB1E5D7537400A61E1BF4 /* libPods-Astronomy-AstronomyTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,7 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5201A3446B20BBA94723078 /* libPods-NavigationApp.a in Frameworks */,
+				E5201A3446B20BBA94723078 /* libPods-Astronomy.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,7 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				054D5BAC66B4411280EEDF42 /* libPods-NavigationApp-tvOS.a in Frameworks */,
+				054D5BAC66B4411280EEDF42 /* libPods-Astronomy-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,20 +130,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A6B093D7E493EB54960D15C /* libPods-NavigationApp-tvOSTests.a in Frameworks */,
+				1A6B093D7E493EB54960D15C /* libPods-Astronomy-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* NavigationAppTests */ = {
+		00E356EF1AD99517003FC87E /* AstronomyTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* NavigationAppTests.m */,
+				00E356F21AD99517003FC87E /* AstronomyTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = NavigationAppTests;
+			path = AstronomyTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -154,7 +154,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* NavigationApp */ = {
+		13B07FAE1A68108700A75B9A /* Astronomy */ = {
 			isa = PBXGroup;
 			children = (
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -165,7 +165,7 @@
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = NavigationApp;
+			name = Astronomy;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -173,10 +173,10 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				A834274C19B72BCC1FE1F84F /* libPods-NavigationApp.a */,
-				B62427BD38D1816EA43F5625 /* libPods-NavigationApp-NavigationAppTests.a */,
-				93CF2B98358D62F6A0AFE551 /* libPods-NavigationApp-tvOS.a */,
-				DCCE5F4CC4FCA05A60E1BCFA /* libPods-NavigationApp-tvOSTests.a */,
+				A834274C19B72BCC1FE1F84F /* libPods-Astronomy.a */,
+				B62427BD38D1816EA43F5625 /* libPods-Astronomy-AstronomyTests.a */,
+				93CF2B98358D62F6A0AFE551 /* libPods-Astronomy-tvOS.a */,
+				DCCE5F4CC4FCA05A60E1BCFA /* libPods-Astronomy-tvOSTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -191,9 +191,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* NavigationApp */,
+				13B07FAE1A68108700A75B9A /* Astronomy */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* NavigationAppTests */,
+				00E356EF1AD99517003FC87E /* AstronomyTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				8B78019E175DAFD68D890C37 /* Pods */,
@@ -207,10 +207,10 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* NavigationApp.app */,
-				00E356EE1AD99517003FC87E /* NavigationAppTests.xctest */,
-				2D02E47B1E0B4A5D006451C7 /* NavigationApp-tvOS.app */,
-				2D02E4901E0B4A5D006451C7 /* NavigationApp-tvOSTests.xctest */,
+				13B07F961A680F5B00A75B9A /* Astronomy.app */,
+				00E356EE1AD99517003FC87E /* AstronomyTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* Astronomy-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* Astronomy-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -241,14 +241,14 @@
 		8B78019E175DAFD68D890C37 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				322D86861EC8F1C3B1B61175 /* Pods-NavigationApp.debug.xcconfig */,
-				985CE2F63B64E61B27C73497 /* Pods-NavigationApp.release.xcconfig */,
-				FCE0951345B4155A85C66036 /* Pods-NavigationApp-NavigationAppTests.debug.xcconfig */,
-				4E3F19A8A481E95B7EA6B29D /* Pods-NavigationApp-NavigationAppTests.release.xcconfig */,
-				76B5F710B63E1CB50770895A /* Pods-NavigationApp-tvOS.debug.xcconfig */,
-				2D3F45107ECFA2F9ED4740C6 /* Pods-NavigationApp-tvOS.release.xcconfig */,
-				7B60445D860CE8208EBC5134 /* Pods-NavigationApp-tvOSTests.debug.xcconfig */,
-				99F9C3008ADB79469D38872D /* Pods-NavigationApp-tvOSTests.release.xcconfig */,
+				322D86861EC8F1C3B1B61175 /* Pods-Astronomy.debug.xcconfig */,
+				985CE2F63B64E61B27C73497 /* Pods-Astronomy.release.xcconfig */,
+				FCE0951345B4155A85C66036 /* Pods-Astronomy-AstronomyTests.debug.xcconfig */,
+				4E3F19A8A481E95B7EA6B29D /* Pods-Astronomy-AstronomyTests.release.xcconfig */,
+				76B5F710B63E1CB50770895A /* Pods-Astronomy-tvOS.debug.xcconfig */,
+				2D3F45107ECFA2F9ED4740C6 /* Pods-Astronomy-tvOS.release.xcconfig */,
+				7B60445D860CE8208EBC5134 /* Pods-Astronomy-tvOSTests.debug.xcconfig */,
+				99F9C3008ADB79469D38872D /* Pods-Astronomy-tvOSTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -256,9 +256,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* NavigationAppTests */ = {
+		00E356ED1AD99517003FC87E /* AstronomyTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "NavigationAppTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "AstronomyTests" */;
 			buildPhases = (
 				BC379477E1ACB3DC183A712F /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -271,14 +271,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = NavigationAppTests;
-			productName = NavigationAppTests;
-			productReference = 00E356EE1AD99517003FC87E /* NavigationAppTests.xctest */;
+			name = AstronomyTests;
+			productName = AstronomyTests;
+			productReference = 00E356EE1AD99517003FC87E /* AstronomyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* NavigationApp */ = {
+		13B07F861A680F5B00A75B9A /* Astronomy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "NavigationApp" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Astronomy" */;
 			buildPhases = (
 				DF1707202D9F2B1F1F6ED7C7 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -292,14 +292,14 @@
 			);
 			dependencies = (
 			);
-			name = NavigationApp;
-			productName = NavigationApp;
-			productReference = 13B07F961A680F5B00A75B9A /* NavigationApp.app */;
+			name = Astronomy;
+			productName = Astronomy;
+			productReference = 13B07F961A680F5B00A75B9A /* Astronomy.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E47A1E0B4A5D006451C7 /* NavigationApp-tvOS */ = {
+		2D02E47A1E0B4A5D006451C7 /* Astronomy-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "NavigationApp-tvOS" */;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Astronomy-tvOS" */;
 			buildPhases = (
 				4B0505A5D47C9D490E03FD0A /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
@@ -312,14 +312,14 @@
 			);
 			dependencies = (
 			);
-			name = "NavigationApp-tvOS";
-			productName = "NavigationApp-tvOS";
-			productReference = 2D02E47B1E0B4A5D006451C7 /* NavigationApp-tvOS.app */;
+			name = "Astronomy-tvOS";
+			productName = "Astronomy-tvOS";
+			productReference = 2D02E47B1E0B4A5D006451C7 /* Astronomy-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E48F1E0B4A5D006451C7 /* NavigationApp-tvOSTests */ = {
+		2D02E48F1E0B4A5D006451C7 /* Astronomy-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "NavigationApp-tvOSTests" */;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Astronomy-tvOSTests" */;
 			buildPhases = (
 				1C810385DD17BEEF54E1BDCB /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
@@ -331,9 +331,9 @@
 			dependencies = (
 				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
 			);
-			name = "NavigationApp-tvOSTests";
-			productName = "NavigationApp-tvOSTests";
-			productReference = 2D02E4901E0B4A5D006451C7 /* NavigationApp-tvOSTests.xctest */;
+			name = "Astronomy-tvOSTests";
+			productName = "Astronomy-tvOSTests";
+			productReference = 2D02E4901E0B4A5D006451C7 /* Astronomy-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -362,7 +362,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "NavigationApp" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Astronomy" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -375,10 +375,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* NavigationApp */,
-				00E356ED1AD99517003FC87E /* NavigationAppTests */,
-				2D02E47A1E0B4A5D006451C7 /* NavigationApp-tvOS */,
-				2D02E48F1E0B4A5D006451C7 /* NavigationApp-tvOSTests */,
+				13B07F861A680F5B00A75B9A /* Astronomy */,
+				00E356ED1AD99517003FC87E /* AstronomyTests */,
+				2D02E47A1E0B4A5D006451C7 /* Astronomy-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* Astronomy-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -463,7 +463,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-NavigationApp-tvOSTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Astronomy-tvOSTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -499,7 +499,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-NavigationApp-tvOS-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Astronomy-tvOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -512,7 +512,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NavigationApp/Pods-NavigationApp-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Astronomy/Pods-Astronomy-resources.sh",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
@@ -553,7 +553,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NavigationApp/Pods-NavigationApp-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Astronomy/Pods-Astronomy-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5F8735CF817475C38AA35F18 /* [CP] Copy Pods Resources */ = {
@@ -562,7 +562,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NavigationApp-NavigationAppTests/Pods-NavigationApp-NavigationAppTests-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Astronomy-AstronomyTests/Pods-Astronomy-AstronomyTests-resources.sh",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
@@ -603,7 +603,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NavigationApp-NavigationAppTests/Pods-NavigationApp-NavigationAppTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Astronomy-AstronomyTests/Pods-Astronomy-AstronomyTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BC379477E1ACB3DC183A712F /* [CP] Check Pods Manifest.lock */ = {
@@ -621,7 +621,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-NavigationApp-NavigationAppTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Astronomy-AstronomyTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -643,7 +643,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-NavigationApp-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Astronomy-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -695,7 +695,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* NavigationAppTests.m in Sources */,
+				00E356F31AD99517003FC87E /* AstronomyTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -721,7 +721,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DCD954D1E0B4F2C00145EB5 /* NavigationAppTests.m in Sources */,
+				2DCD954D1E0B4F2C00145EB5 /* AstronomyTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -730,12 +730,12 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* NavigationApp */;
+			target = 13B07F861A680F5B00A75B9A /* Astronomy */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D02E47A1E0B4A5D006451C7 /* NavigationApp-tvOS */;
+			target = 2D02E47A1E0B4A5D006451C7 /* Astronomy-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -743,14 +743,14 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FCE0951345B4155A85C66036 /* Pods-NavigationApp-NavigationAppTests.debug.xcconfig */;
+			baseConfigurationReference = FCE0951345B4155A85C66036 /* Pods-Astronomy-AstronomyTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = NavigationAppTests/Info.plist;
+				INFOPLIST_FILE = AstronomyTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -760,17 +760,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NavigationApp.app/NavigationApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Astronomy.app/Astronomy";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4E3F19A8A481E95B7EA6B29D /* Pods-NavigationApp-NavigationAppTests.release.xcconfig */;
+			baseConfigurationReference = 4E3F19A8A481E95B7EA6B29D /* Pods-Astronomy-AstronomyTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = NavigationAppTests/Info.plist;
+				INFOPLIST_FILE = AstronomyTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -780,19 +780,19 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NavigationApp.app/NavigationApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Astronomy.app/Astronomy";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 322D86861EC8F1C3B1B61175 /* Pods-NavigationApp.debug.xcconfig */;
+			baseConfigurationReference = 322D86861EC8F1C3B1B61175 /* Pods-Astronomy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = NavigationApp/Info.plist;
+				INFOPLIST_FILE = Astronomy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -800,7 +800,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = NavigationApp;
+				PRODUCT_NAME = Astronomy;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -809,12 +809,12 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 985CE2F63B64E61B27C73497 /* Pods-NavigationApp.release.xcconfig */;
+			baseConfigurationReference = 985CE2F63B64E61B27C73497 /* Pods-Astronomy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = NavigationApp/Info.plist;
+				INFOPLIST_FILE = Astronomy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -822,7 +822,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = NavigationApp;
+				PRODUCT_NAME = Astronomy;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -830,7 +830,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 76B5F710B63E1CB50770895A /* Pods-NavigationApp-tvOS.debug.xcconfig */;
+			baseConfigurationReference = 76B5F710B63E1CB50770895A /* Pods-Astronomy-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -841,14 +841,14 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "NavigationApp-tvOS/Info.plist";
+				INFOPLIST_FILE = "Astronomy-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.NavigationApp-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Astronomy-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -858,7 +858,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D3F45107ECFA2F9ED4740C6 /* Pods-NavigationApp-tvOS.release.xcconfig */;
+			baseConfigurationReference = 2D3F45107ECFA2F9ED4740C6 /* Pods-Astronomy-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -869,14 +869,14 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "NavigationApp-tvOS/Info.plist";
+				INFOPLIST_FILE = "Astronomy-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.NavigationApp-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Astronomy-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -886,7 +886,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7B60445D860CE8208EBC5134 /* Pods-NavigationApp-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = 7B60445D860CE8208EBC5134 /* Pods-Astronomy-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -896,24 +896,24 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "NavigationApp-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "Astronomy-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.NavigationApp-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Astronomy-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NavigationApp-tvOS.app/NavigationApp-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Astronomy-tvOS.app/Astronomy-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Debug;
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 99F9C3008ADB79469D38872D /* Pods-NavigationApp-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = 99F9C3008ADB79469D38872D /* Pods-Astronomy-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -923,17 +923,17 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "NavigationApp-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "Astronomy-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.NavigationApp-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Astronomy-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NavigationApp-tvOS.app/NavigationApp-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Astronomy-tvOS.app/Astronomy-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
@@ -1054,7 +1054,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "NavigationAppTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "AstronomyTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -1063,7 +1063,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "NavigationApp" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Astronomy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -1072,7 +1072,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "NavigationApp-tvOS" */ = {
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Astronomy-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
@@ -1081,7 +1081,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "NavigationApp-tvOSTests" */ = {
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Astronomy-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
@@ -1090,7 +1090,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "NavigationApp" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Astronomy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
