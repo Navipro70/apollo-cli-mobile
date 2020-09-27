@@ -1,15 +1,17 @@
-import { SignUpView } from './SignUpView'
-import React from 'react'
+import AsyncStorage from '@react-native-community/async-storage'
 import { StackNavigationProp } from '@react-navigation/stack'
-import { TAuthScreens } from '../Auth'
+import React from 'react'
+
+import { StorageKeys } from '../../../constants/constants'
 import { AUTH_ROUTES as ROUTES } from '../../../constants/routes'
 import { useRegisterUserMutation } from '../../../generated/graphql'
 import { extractServerError } from '../../../lib/hooks/extractServerGraphQLError'
-import { TSignUpFormik } from '../../../types'
 import { useCurrentUser } from '../../../lib/hooks/useCurrentUser'
-import { StorageKeys } from '../../../constants/constants'
-import AsyncStorage from '@react-native-community/async-storage'
 import { useNotify } from '../../../lib/hooks/useNotify/useNotify'
+import { TSignUpFormik } from '../../../types'
+import { TAuthScreens } from '../Auth'
+
+import { SignUpView } from './SignUpView'
 
 interface Props {
   navigation: StackNavigationProp<TAuthScreens, ROUTES.SignUp>

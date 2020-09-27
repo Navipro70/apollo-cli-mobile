@@ -1,9 +1,10 @@
+import AsyncStorage from '@react-native-community/async-storage'
 import React, { useContext, useReducer } from 'react'
+
+import { StorageKeys } from '../../constants/constants'
+import { AuthReducer } from '../../constants/reducers'
 import { User } from '../../generated/graphql'
 import { TAuthReducer } from '../../types'
-import { AuthReducer } from '../../constants/reducers'
-import { StorageKeys } from '../../constants/constants'
-import AsyncStorage from '@react-native-community/async-storage'
 
 interface IContext {
   user: User | null
