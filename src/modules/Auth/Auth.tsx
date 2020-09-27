@@ -1,19 +1,21 @@
-import { AUTH_ROUTES } from "../../constants/routes";
-import { SignUp } from "./SignUp/SignUp";
-import React from "react";
-import { createStackNavigator } from "@react-navigation/stack";
-import { SingIn } from "./SignIn/SignIn";
+import { createStackNavigator } from '@react-navigation/stack'
+import React from 'react'
+
+import { AUTH_ROUTES } from '~/constants/routes'
+
+import { SingIn } from './SignIn/SignIn'
+import { SignUp } from './SignUp/SignUp'
 
 export type TAuthScreens = {
-  [AUTH_ROUTES.SignIn]: undefined;
-  [AUTH_ROUTES.SignUp]: undefined;
-};
+  [AUTH_ROUTES.SignIn]: undefined
+  [AUTH_ROUTES.SignUp]: undefined
+}
 
-const Stack = createStackNavigator<TAuthScreens>();
+const Stack = createStackNavigator<TAuthScreens>()
 
 export const Auth = () => (
   <Stack.Navigator screenOptions={{ headerShown: false }}>
-    <Stack.Screen name={AUTH_ROUTES.SignIn} component={SingIn} />
-    <Stack.Screen name={AUTH_ROUTES.SignUp} component={SignUp} />
+    <Stack.Screen component={SingIn} name={AUTH_ROUTES.SignIn} />
+    <Stack.Screen component={SignUp} name={AUTH_ROUTES.SignUp} />
   </Stack.Navigator>
-);
+)

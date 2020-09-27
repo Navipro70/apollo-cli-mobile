@@ -2,13 +2,14 @@ import AsyncStorage from '@react-native-community/async-storage'
 import { StackNavigationProp } from '@react-navigation/stack'
 import React from 'react'
 
-import { StorageKeys } from '../../../constants/constants'
-import { AUTH_ROUTES as ROUTES } from '../../../constants/routes'
-import { useRegisterUserMutation } from '../../../generated/graphql'
-import { extractServerError } from '../../../lib/hooks/extractServerGraphQLError'
-import { useCurrentUser } from '../../../lib/hooks/useCurrentUser'
-import { useNotify } from '../../../lib/hooks/useNotify/useNotify'
-import { TSignUpFormik } from '../../../types'
+import { StorageKeys } from '~/constants/constants'
+import { AUTH_ROUTES as ROUTES } from '~/constants/routes'
+import { useRegisterUserMutation } from '~/generated/graphql'
+import { extractServerError } from '~/lib/hooks/extractServerGraphQLError'
+import { useCurrentUser } from '~/lib/hooks/useCurrentUser'
+import { useNotify } from '~/lib/hooks/useNotify/useNotify'
+import { TSignUpFormik } from '~/types'
+
 import { TAuthScreens } from '../Auth'
 
 import { SignUpView } from './SignUpView'
@@ -16,7 +17,7 @@ import { SignUpView } from './SignUpView'
 interface Props {
   navigation: StackNavigationProp<TAuthScreens, ROUTES.SignUp>
 }
-//TODO fix error
+
 export const SignUp = ({ navigation }: Props) => {
   const notify = useNotify()
 

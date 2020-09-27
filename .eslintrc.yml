@@ -91,7 +91,6 @@ rules:
 
   react-hooks/exhaustive-deps: 'warn'
 
-  import/no-cycle: 'warn'
   import/no-useless-path-segments: 'error'
   import/no-unused-modules: 'error'
   import/order:
