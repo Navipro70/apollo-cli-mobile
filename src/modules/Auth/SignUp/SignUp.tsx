@@ -42,5 +42,5 @@ export const SignUp = ({ navigation }: Props) => {
 
   const signInHandler = () => navigation.navigate(ROUTES.SignIn)
 
-  return <SignUpView signInHandler={signInHandler} loading={loading} onSubmit={onSubmit} />
+  return <SignUpView loading={loading} signInHandler={signInHandler} onSubmit={onSubmit} />
 }

@@ -1,8 +1,8 @@
 import * as RNLocalize from 'react-native-localize'
 
-import { data } from './en/data'
-
-export const getLang = () => {
+import { data as en } from './en/data'
+const data = { en }
+const getLang = () => {
   const lang = RNLocalize.findBestAvailableLanguage(['en']) ?? null
   const languageTag = lang?.languageTag ?? 'en'
 
@@ -11,7 +11,5 @@ export const getLang = () => {
 
 export const i18n = () => {
   const lang = getLang()
-  return data[lang].data
+  return data[lang]
 }
-
-export type Data = typeof data

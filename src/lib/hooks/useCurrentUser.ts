@@ -48,6 +48,7 @@ function authReducer(state: IAuthState, action: TAuthReducer) {
 }
 
 export function userContextState(): IContext {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [state, dispatch] = useReducer(authReducer, { user: null })
   function login(userData: User) {
     dispatch({

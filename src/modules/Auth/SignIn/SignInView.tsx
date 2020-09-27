@@ -1,79 +1,67 @@
-import React from "react";
-import { StyleSheet } from "react-native";
-import { View, Text } from "react-native-ui-lib";
-import { colors } from "../../../styles";
-import { AppButton } from "../../../components/AppButton";
-import { Input } from "../../../components/Input";
-import { SafeAreaView } from "react-native-safe-area-context";
-import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
-import { useFormik } from "formik";
-import { signInValidator } from "../../../constants/validatiors";
-import { TSignInFormik } from "../../../types";
+import { useFormik } from 'formik'
+import React from 'react'
+import { StyleSheet } from 'react-native'
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
+import { SafeAreaView } from 'react-native-safe-area-context'
+import { View, Text } from 'react-native-ui-lib'
+
+import { AppButton } from '../../../components/AppButton'
+import { Input } from '../../../components/Input'
+import { signInValidator } from '../../../constants/validatiors'
+import { i18n } from '../../../i18n/i18n'
+import { colors } from '../../../styles'
+import { TSignInFormik } from '../../../types'
 
 interface Props {
-  loading: boolean;
-  signUpHandler: () => void;
-  onSubmit: TSignInFormik;
-  generalError: string;
+  loading: boolean
+  signUpHandler: () => void
+  onSubmit: TSignInFormik
+  generalError: string
 }
 
-export const SignInView = ({
-  onSubmit,
-  signUpHandler,
-  loading,
-  generalError,
-}: Props) => {
+export const SignInView = ({ onSubmit, signUpHandler, loading, generalError }: Props) => {
   const formik = useFormik({
     initialValues: {
-      username: "",
-      password: "",
+      username: '',
+      password: '',
     },
     validationSchema: signInValidator,
     onSubmit,
-  });
-
+  })
+  const { commonForm } = i18n()
   return (
     <SafeAreaView style={styles.container}>
       <KeyboardAwareScrollView contentContainerStyle={styles.wrapper}>
-        <View marginT-40 center>
-          <Text
-            color={colors.gray}
-            style={styles.h3}
-            children="Good morning!"
-          />
-          <Text
-            color="#fff"
-            marginT-20
-            style={styles.h1}
-            children="Welcome back."
-          />
+        <View center marginT-40>
+          <Text children={commonForm.goodMorning} color={colors.gray} style={styles.h3} />
+          <Text marginT-20 children={commonForm.welcomeBack} color="#fff" style={styles.h1} />
         </View>
         <View center>
           <Input
-            value={formik.values.username}
-            onChangeText={(text) => formik.setFieldValue("username", text)}
-            onFocus={() => formik.setFieldTouched("username", false)}
-            onBlur={() => formik.setFieldTouched("username", true)}
-            error={formik.touched.username ? formik.errors.username : undefined}
-            style={styles.input}
-            maxLength={30}
-            inputIcon="account-circle-outline"
             color={colors.aqua}
-            placeholder="Username"
+            error={formik.touched.username ? formik.errors.username : undefined}
+            inputIcon="account-circle-outline"
+            maxLength={30}
+            placeholder={commonForm.username}
+            style={styles.input}
+            value={formik.values.username}
+            onBlur={() => formik.setFieldTouched('username', true)}
+            onChangeText={(text) => formik.setFieldValue('username', text)}
+            onFocus={() => formik.setFieldTouched('username', false)}
           />
           <Input
-            value={formik.values.password}
-            onChangeText={(text) => formik.setFieldValue("password", text)}
-            onFocus={() => formik.setFieldTouched("password", false)}
-            onBlur={() => formik.setFieldTouched("password", true)}
-            error={formik.touched.password ? formik.errors.password : undefined}
-            style={styles.input}
-            maxLength={30}
-            inputIcon="lock-outline"
-            color={colors.aqua}
-            placeholder="Password"
-            onSubmitEditing={() => formik.handleSubmit()}
             secure
+            color={colors.aqua}
+            error={formik.touched.password ? formik.errors.password : undefined}
+            inputIcon="lock-outline"
+            maxLength={30}
+            placeholder={commonForm.password}
+            style={styles.input}
+            value={formik.values.password}
+            onBlur={() => formik.setFieldTouched('password', true)}
+            onChangeText={(text) => formik.setFieldValue('password', text)}
+            onFocus={() => formik.setFieldTouched('password', false)}
+            onSubmitEditing={() => formik.handleSubmit()}
           />
           <View center>
             <Text children={generalError} style={styles.generalError} />
@@ -81,21 +69,21 @@ export const SignInView = ({
         </View>
         <View center marginB-10>
           <AppButton
-            style={styles.extraButton}
-            title="Login"
-            onPress={formik.handleSubmit}
             loading={loading}
+            style={styles.extraButton}
+            title={commonForm.login}
+            onPress={formik.handleSubmit}
           />
           <AppButton
             style={{ ...styles.extraButton, ...styles.button }}
-            title="SignUp"
+            title={commonForm.signUp}
             onPress={signUpHandler}
           />
         </View>
       </KeyboardAwareScrollView>
     </SafeAreaView>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -104,7 +92,7 @@ const styles = StyleSheet.create({
   },
   wrapper: {
     flex: 1,
-    justifyContent: "space-between",
+    justifyContent: 'space-between',
   },
   h1: {
     fontSize: 40,
@@ -112,22 +100,19 @@ const styles = StyleSheet.create({
   h3: {
     fontSize: 24,
   },
-  textInput: {
-    width: "75%",
-  },
   extraButton: {
-    width: "80%",
+    width: '80%',
     marginTop: 20,
   },
   button: {
     backgroundColor: colors.backgroundAqua,
   },
   input: {
-    width: "75%",
+    width: '75%',
   },
   generalError: {
-    position: "absolute",
+    position: 'absolute',
     color: colors.red,
     fontSize: 16,
   },
-});
+})
