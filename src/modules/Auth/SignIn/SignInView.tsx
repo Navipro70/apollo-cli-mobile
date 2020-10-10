@@ -18,8 +18,8 @@ export interface Values {
 
 const getSchema = () =>
   object<Values>({
-    username: string().min(5, 'Too short').required(),
-    password: string().required(),
+    username: string().required(),
+    password: string().min(5).required(),
   })
 
 interface Props {
@@ -27,12 +27,14 @@ interface Props {
   onSubmit: OnSubmit<Values>
 }
 
+const { commonForm } = i18n()
+
 export const SignInView = ({ onSubmit, signUpNavigation }: Props) => {
   const { field, submitProps } = useForm({
     getSchema,
+    validateOnBlur: true,
     onSubmit,
   })
-  const { commonForm } = i18n()
   return (
     <SafeAreaView style={styles.container}>
       <KeyboardAwareScrollView contentContainerStyle={styles.wrapper}>
@@ -47,29 +49,23 @@ export const SignInView = ({ onSubmit, signUpNavigation }: Props) => {
         </View>
         <View center>
           <Input
-            color={colors.aqua}
-            // error={formik.touched.username ? formik.errors.username : undefined}
             {...field('username')}
             inputIcon="account-circle-outline"
-            maxLength={30}
             placeholder={commonForm.username}
             style={styles.input}
           />
           <Input
             secure
-            color={colors.aqua}
-            // error={formik.touched.password ? formik.errors.password : undefined}
             inputIcon="lock-outline"
-            maxLength={30}
             placeholder={commonForm.password}
             style={styles.input}
-            {...field('username')}
+            {...field('password', { allowSubmit: true })}
           />
         </View>
         <View center marginB-10>
-          <AppButton style={styles.extraButton} title={commonForm.login} {...submitProps} />
+          <AppButton style={styles.button} title={commonForm.login} {...submitProps} />
           <AppButton
-            style={{ ...styles.extraButton, ...styles.button }}
+            style={[styles.extraButton, styles.button]}
             title={commonForm.signUp}
             onPress={signUpNavigation}
           />
@@ -95,11 +91,11 @@ const styles = StyleSheet.create({
     fontSize: 24,
   },
   extraButton: {
-    width: '80%',
-    marginTop: 20,
+    backgroundColor: colors.backgroundAqua,
+    marginVertical: 20,
   },
   button: {
-    backgroundColor: colors.backgroundAqua,
+    width: '80%',
   },
   input: {
     width: '75%',
