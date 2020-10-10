@@ -12,4 +12,9 @@ export const data = {
     welcomeBack: 'Welcome back.',
     createYourAccount: 'Create your account!',
   },
+  yup: {
+    required: 'This field is require',
+    min: 'Too short',
+    email: 'Enter a valid email',
+  },
 }

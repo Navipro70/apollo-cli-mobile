@@ -1,4 +1,3 @@
-import { useFormik } from 'formik'
 import React from 'react'
 import { StyleSheet } from 'react-native'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
@@ -7,24 +6,30 @@ import { View, Text } from 'react-native-ui-lib'
 
 import { AppButton } from '~/components'
 import { Input } from '~/components'
-import { signInValidator } from '~/constants'
 import { i18n } from '~/i18n'
+import { OnSubmit, useForm } from '~/lib/hooks'
+import { object, string } from '~/lib/yup'
 import { colors } from '~/styles'
-import { TSignInFormik } from '~/types'
 
-interface Props {
-  loading: boolean
-  signUpHandler: () => void
-  onSubmit: TSignInFormik
+export interface Values {
+  username: string
+  password: string
 }
 
-export const SignInView = ({ onSubmit, signUpHandler, loading }: Props) => {
-  const formik = useFormik({
-    initialValues: {
-      username: '',
-      password: '',
-    },
-    validationSchema: signInValidator,
+const getSchema = () =>
+  object<Values>({
+    username: string().min(5, 'Too short').required(),
+    password: string().required(),
+  })
+
+interface Props {
+  signUpNavigation: () => void
+  onSubmit: OnSubmit<Values>
+}
+
+export const SignInView = ({ onSubmit, signUpNavigation }: Props) => {
+  const { field, submitProps } = useForm({
+    getSchema,
     onSubmit,
   })
   const { commonForm } = i18n()
@@ -33,47 +38,40 @@ export const SignInView = ({ onSubmit, signUpHandler, loading }: Props) => {
       <KeyboardAwareScrollView contentContainerStyle={styles.wrapper}>
         <View center marginT-40>
           <Text children={commonForm.goodMorning} color={colors.gray} style={styles.h3} />
-          <Text marginT-20 children={commonForm.welcomeBack} color="#fff" style={styles.h1} />
+          <Text
+            marginT-20
+            children={commonForm.welcomeBack}
+            color={colors.white}
+            style={styles.h1}
+          />
         </View>
         <View center>
           <Input
             color={colors.aqua}
-            error={formik.touched.username ? formik.errors.username : undefined}
+            // error={formik.touched.username ? formik.errors.username : undefined}
+            {...field('username')}
             inputIcon="account-circle-outline"
             maxLength={30}
             placeholder={commonForm.username}
             style={styles.input}
-            value={formik.values.username}
-            onBlur={() => formik.setFieldTouched('username', true)}
-            onChangeText={(text) => formik.setFieldValue('username', text)}
-            onFocus={() => formik.setFieldTouched('username', false)}
           />
           <Input
             secure
             color={colors.aqua}
-            error={formik.touched.password ? formik.errors.password : undefined}
+            // error={formik.touched.password ? formik.errors.password : undefined}
             inputIcon="lock-outline"
             maxLength={30}
             placeholder={commonForm.password}
             style={styles.input}
-            value={formik.values.password}
-            onBlur={() => formik.setFieldTouched('password', true)}
-            onChangeText={(text) => formik.setFieldValue('password', text)}
-            onFocus={() => formik.setFieldTouched('password', false)}
-            onSubmitEditing={() => formik.handleSubmit()}
+            {...field('username')}
           />
         </View>
         <View center marginB-10>
-          <AppButton
-            loading={loading}
-            style={styles.extraButton}
-            title={commonForm.login}
-            onPress={formik.handleSubmit}
-          />
+          <AppButton style={styles.extraButton} title={commonForm.login} {...submitProps} />
           <AppButton
             style={{ ...styles.extraButton, ...styles.button }}
             title={commonForm.signUp}
-            onPress={signUpHandler}
+            onPress={signUpNavigation}
           />
         </View>
       </KeyboardAwareScrollView>
