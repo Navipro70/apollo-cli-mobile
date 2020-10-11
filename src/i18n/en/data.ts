@@ -17,4 +17,8 @@ export const data = {
     min: 'Too short',
     email: 'Enter a valid email',
   },
+  notify: {
+    internetConnection: 'Please, check your internet connection',
+    unexpected: 'Unexpected error occurred',
+  },
 }

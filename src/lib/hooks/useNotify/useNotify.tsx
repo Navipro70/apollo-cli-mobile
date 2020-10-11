@@ -1,6 +1,7 @@
 import React, { createContext, useCallback, useContext, useRef, useState } from 'react'
 
 import { SNACKBAR_ANIMATION_OUT_TIMING, AppNotification, Snackbar } from '~/components/Snackbar'
+import { i18n } from '~/i18n'
 
 import { extractGraphQLError } from '../extractGraphQLError'
 
@@ -23,7 +24,7 @@ export const useNotify = () => {
 
   return value
 }
-
+const { internetConnection, unexpected } = i18n().notify
 export const NotificationsProvider: React.FC = ({ children }) => {
   const [notification, setNotification] = useState<null | AppNotification>(null)
   const promiseRef = useRef<Promise<unknown>>(Promise.resolve())
@@ -41,7 +42,12 @@ export const NotificationsProvider: React.FC = ({ children }) => {
   const error = (error: any, text?: string) => {
     const snackbarNotification = {
       show: true,
-      text: text ?? extractGraphQLError(error) ?? 'Unexpected error occurred',
+      text:
+        text ??
+        extractGraphQLError(error) ??
+        error.message === 'Network error: Network request failed'
+          ? internetConnection
+          : unexpected,
     }
 
     show(snackbarNotification, ERROR_TIME_OPEN)

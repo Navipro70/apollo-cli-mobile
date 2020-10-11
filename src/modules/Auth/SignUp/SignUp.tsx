@@ -26,9 +26,7 @@ export const SignUp = ({ navigation: { navigate } }: Props) => {
 
   const onSubmit: TSignUpFormik = async (values, formikBag) => {
     try {
-      const { data } = await addUser({
-        variables: values,
-      })
+      const { data } = await addUser({ variables: values })
       if (data) {
         await AsyncStorage.setItem(StorageKeys.Token, data.register.token)
         login(data.register)

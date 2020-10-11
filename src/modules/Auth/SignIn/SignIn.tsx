@@ -32,6 +32,7 @@ export const SingIn = ({ navigation: { navigate } }: Props) => {
         login(data.login)
       }
     } catch (err) {
+      console.log(err.message)
       notify.error(err)
     }
   }

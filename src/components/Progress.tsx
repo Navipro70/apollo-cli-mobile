@@ -1,16 +1,18 @@
 import React from 'react'
-import { StyleSheet } from 'react-native'
+import { StyleProp, StyleSheet, ViewStyle } from 'react-native'
 import * as Progress from 'react-native-progress'
+
+import { colors } from '~/styles'
 
 interface Props {
   color?: string
   size?: number
-  style?: object
+  style?: StyleProp<ViewStyle>
 }
 
-const STANDARD_SPINNER_SIZE = 21
+const STANDARD_SPINNER_SIZE = 30
 
-export const Spinner = ({ color = '#990000', size = STANDARD_SPINNER_SIZE, style }: Props) => (
+export const Spinner = ({ color = colors.pink, size = STANDARD_SPINNER_SIZE, style }: Props) => (
   <Progress.Circle
     indeterminate
     borderColor={color}
@@ -22,12 +24,8 @@ export const Spinner = ({ color = '#990000', size = STANDARD_SPINNER_SIZE, style
 
 const styles = StyleSheet.create({
   spinner: {
-    position: 'absolute',
+    ...StyleSheet.absoluteFillObject,
     justifyContent: 'center',
     alignItems: 'center',
-    top: 20,
-    bottom: 0,
-    left: 0,
-    right: 0,
   },
 })
