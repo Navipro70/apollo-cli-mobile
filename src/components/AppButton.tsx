@@ -24,7 +24,6 @@ export const AppButton: FC<TProps> = ({ onPress, title, style, loading, ...rest 
   <TouchableOpacity
     activeOpacity={0.5}
     delayPressIn={0}
-    disabled={loading}
     style={styles.container}
     onPress={onPress}
     {...rest}

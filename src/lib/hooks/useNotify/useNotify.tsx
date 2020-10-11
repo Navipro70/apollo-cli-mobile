@@ -40,14 +40,15 @@ export const NotificationsProvider: React.FC = ({ children }) => {
   }
 
   const error = (error: any, text?: string) => {
+    console.log(error.message)
     const snackbarNotification = {
       show: true,
       text:
         text ??
         extractGraphQLError(error) ??
-        error.message === 'Network error: Network request failed'
+        (error.message === 'Network error: Network request failed'
           ? internetConnection
-          : unexpected,
+          : unexpected),
     }
 
     show(snackbarNotification, ERROR_TIME_OPEN)
