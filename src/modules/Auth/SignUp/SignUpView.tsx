@@ -19,7 +19,7 @@ export interface Values {
 }
 
 interface Props {
-  signInHandler: () => void
+  signInNavigation: () => void
   onSubmit: OnSubmit<Values>
 }
 
@@ -33,7 +33,7 @@ const getSchema = () =>
 
 const { commonForm } = i18n()
 
-export const SignUpView = ({ signInHandler, onSubmit }: Props) => {
+export const SignUpView = ({ signInNavigation, onSubmit }: Props) => {
   const { field, submitProps, formik } = useForm({
     validateOnBlur: true,
     validateOnChange: false,
@@ -81,7 +81,7 @@ export const SignUpView = ({ signInHandler, onSubmit }: Props) => {
           <AppButton
             style={[styles.button, styles.extraButton]}
             title={commonForm.signIn}
-            onPress={signInHandler}
+            onPress={signInNavigation}
           />
         </View>
       </KeyboardAwareScrollView>

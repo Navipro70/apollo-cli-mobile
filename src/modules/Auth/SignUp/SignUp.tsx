@@ -18,7 +18,7 @@ interface Props {
 }
 
 export const SignUp = ({ navigation: { navigate } }: Props) => {
-  const signInHandler = useCallback(() => navigate(ROUTES.SignIn), [navigate])
+  const signInNavigation = useCallback(() => navigate(ROUTES.SignIn), [navigate])
 
   const [addUser] = useRegisterUserMutation()
   const { login } = useRegister()
@@ -38,5 +38,5 @@ export const SignUp = ({ navigation: { navigate } }: Props) => {
     }
   }
 
-  return <SignUpView signInHandler={signInHandler} onSubmit={onSubmit} />
+  return <SignUpView signInNavigation={signInNavigation} onSubmit={onSubmit} />
 }
