@@ -3,6 +3,7 @@ import { StyleSheet } from 'react-native'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { View, Text } from 'react-native-ui-lib'
+import { Schema } from 'yup'
 
 import { AppButton } from '~/components'
 import { Input } from '~/components'
@@ -29,7 +30,7 @@ const getSchema = () =>
     username: string().required(),
     password: string().min(5).required(),
     confirmPassword: string().min(5).required(),
-  })
+  }) as Schema<Values>
 
 const { commonForm } = i18n()
 

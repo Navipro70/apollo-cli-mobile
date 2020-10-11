@@ -13,9 +13,9 @@ yup.setLocale({
 })
 
 export { object, array } from 'yup'
-export const string = <T extends string>() => yup.string<T>().default('')
+export const string = () => yup.string().default('')
 export const number = () => yup.number()
 export const boolean = () => yup.boolean()
 export const date = () => yup.date()
 export const enumerate = <T extends string>(enumeration: Record<string, T>) =>
-  string<T>().oneOf(Object.values(enumeration))
+  string().oneOf(Object.values(enumeration))
