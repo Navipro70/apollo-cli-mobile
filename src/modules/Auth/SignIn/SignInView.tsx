@@ -55,13 +55,11 @@ export const SignInView = ({ onSubmit, signUpNavigation }: Props) => {
             {...field('username')}
             inputIcon="account-circle-outline"
             placeholder={commonForm.username}
-            style={styles.input}
           />
           <Input
             secure
             inputIcon="lock-outline"
             placeholder={commonForm.password}
-            style={styles.input}
             {...field('password', { allowSubmit: true })}
           />
         </View>
@@ -99,8 +97,5 @@ const styles = StyleSheet.create({
   },
   button: {
     width: '80%',
-  },
-  input: {
-    width: '75%',
   },
 })

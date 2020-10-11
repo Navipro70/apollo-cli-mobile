@@ -70,6 +70,7 @@ const styles = StyleSheet.create({
   textField: {
     fontSize: 20,
     color: colors.white,
+    width: '75%',
   },
   inputIcon: {
     paddingRight: 10,

@@ -52,27 +52,23 @@ export const SignUpView = ({ signInNavigation, onSubmit }: Props) => {
           <Input
             inputIcon="account-circle-outline"
             placeholder={commonForm.username}
-            style={styles.input}
             {...field('username')}
           />
           <Input
             inputIcon="account-circle-outline"
             placeholder={commonForm.email}
-            style={styles.input}
             {...field('email')}
           />
           <Input
             secure
             inputIcon="lock-outline"
             placeholder={commonForm.password}
-            style={styles.input}
             {...field('password')}
           />
           <Input
             secure
             inputIcon="lock-outline"
             placeholder={commonForm.confirmPassword}
-            style={styles.input}
             {...field('confirmPassword')}
             onSubmitEditing={() => formik.handleSubmit()}
           />
@@ -102,9 +98,6 @@ const styles = StyleSheet.create({
   h1: {
     fontSize: 30,
     color: colors.white,
-  },
-  input: {
-    width: '75%',
   },
   button: {
     width: '80%',
