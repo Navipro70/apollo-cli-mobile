@@ -35,7 +35,7 @@ const getSchema = () =>
 
 const { commonForm } = i18n()
 
-export const SignUpView = ({ signInHandler, loading, onSubmit }: Props) => {
+export const SignUpView = ({ signInHandler, onSubmit }: Props) => {
   const { field, submitProps, formik } = useForm({
     initialValues: {
       username: '',
@@ -82,12 +82,7 @@ export const SignUpView = ({ signInHandler, loading, onSubmit }: Props) => {
           />
         </View>
         <View center marginB-10>
-          <AppButton
-            spinnerStyle={styles.spinner}
-            style={styles.button}
-            title={commonForm.submit}
-            {...submitProps}
-          />
+          <AppButton style={styles.button} title={commonForm.submit} {...submitProps} />
           <AppButton
             style={[styles.button, styles.extraButton]}
             title={commonForm.signIn}
@@ -121,8 +116,5 @@ const styles = StyleSheet.create({
   extraButton: {
     backgroundColor: colors.backgroundAqua,
     marginVertical: 20,
-  },
-  spinner: {
-    top: 0,
   },
 })

@@ -1,6 +1,6 @@
 import AsyncStorage from '@react-native-community/async-storage'
 import { StackNavigationProp } from '@react-navigation/stack'
-import React, { useCallback } from 'react'
+import React, { useCallback, useMemo } from 'react'
 
 import { StorageKeys } from '~/constants'
 import { AUTH_ROUTES as ROUTES } from '~/constants'
@@ -19,10 +19,10 @@ interface Props {
 export const SingIn = ({ navigation: { navigate } }: Props) => {
   const signUpNavigation = useCallback(() => navigate(ROUTES.SignUp), [navigate])
 
-  const notify = useNotify()
+  const notify = useMemo(useNotify, [])
 
   const [loginUser] = useLoginUserMutation()
-  const { login } = useRegister()
+  const { login } = useMemo(useRegister, [])
 
   const onSubmit = async (value: Values) => {
     try {
@@ -32,7 +32,6 @@ export const SingIn = ({ navigation: { navigate } }: Props) => {
         login(data.login)
       }
     } catch (err) {
-      console.log(err.message)
       notify.error(err)
     }
   }
