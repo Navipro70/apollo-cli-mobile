@@ -26,7 +26,7 @@ settings:
 rules:
   no-irregular-whitespace: 'error'
   no-useless-escape: 'error'
-  no-magic-numbers: ['warn', { ignore: [0, 1, 2, 4] }]
+  no-magic-numbers: ['warn', { ignore: [0, 1, 2, 4, 5] }]
   no-shadow: 'warn'
   no-restricted-imports:
     [

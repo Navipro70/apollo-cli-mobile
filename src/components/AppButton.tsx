@@ -1,5 +1,13 @@
 import React, { FC } from 'react'
-import { StyleSheet, TouchableOpacity, Text, View, TouchableOpacityProps } from 'react-native'
+import {
+  StyleSheet,
+  TouchableOpacity,
+  Text,
+  View,
+  TouchableOpacityProps,
+  StyleProp,
+  ViewStyle,
+} from 'react-native'
 
 import { colors } from '../styles'
 
@@ -8,27 +16,19 @@ import { Spinner } from './Progress'
 interface TProps extends TouchableOpacityProps {
   onPress: () => void
   title: string
-  style?: object
-  spinnerStyle?: object
+  style?: StyleProp<ViewStyle>
   loading?: boolean
 }
 
-export const AppButton: FC<TProps> = ({
-  onPress,
-  title,
-  style,
-  loading,
-  spinnerStyle,
-  ...rest
-}) => (
+export const AppButton: FC<TProps> = ({ onPress, title, style, loading, ...rest }) => (
   <TouchableOpacity
     activeOpacity={0.5}
-    disabled={loading}
+    delayPressIn={0}
     style={styles.container}
     onPress={onPress}
     {...rest}
   >
-    {loading && <Spinner color={colors.red} size={30} style={spinnerStyle} />}
+    {loading && <Spinner color={colors.red} />}
     <View style={[styles.appButtonWrapper, style, loading && styles.loadingOpacity]}>
       <Text style={styles.appButtonText}>{title}</Text>
     </View>

@@ -1,9 +1,12 @@
-import { useFormik, FormikConfig } from 'formik'
+import { useFormik, FormikConfig, FormikHelpers } from 'formik'
 import { useRef } from 'react'
 import { Schema } from 'yup'
 
 export type Errors<Value extends object> = Partial<Record<keyof Value, string>>
-export type OnSubmit<Value extends object> = (value: Value) => Promise<void | Errors<Value>>
+export type OnSubmit<Value extends object> = (
+  value: Value,
+  formik: FormikHelpers<Value>,
+) => Promise<void | Errors<Value>>
 
 export interface SubmitProps {
   disabled: boolean

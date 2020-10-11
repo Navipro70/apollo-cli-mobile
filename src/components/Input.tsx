@@ -6,9 +6,9 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
 import { colors } from '~/styles'
 
-interface Props extends TextFieldProps {
+interface Props extends Omit<TextFieldProps, 'onChange'> {
   value: string
-  onChangeText: (text: string) => void
+  onChange: (text: string) => void
   color?: string
   error?: string
   inputIcon?: string
@@ -18,7 +18,7 @@ interface Props extends TextFieldProps {
 
 export const Input = ({
   style,
-  onChangeText,
+  onChange,
   value,
   color,
   secure,
@@ -32,23 +32,29 @@ export const Input = ({
   return (
     <View centerV marginV-5 row>
       {Boolean(inputIcon) && (
-        <Icon color={color} name={inputIcon as string} size={35} style={styles.inputIcon} />
+        <Icon
+          color={color ?? colors.aqua}
+          name={inputIcon as string}
+          size={35}
+          style={styles.inputIcon}
+        />
       )}
       <TextField
         autoCapitalize="none"
         autoCorrect={false}
-        color={color}
+        color={colors.aqua}
         error={error}
+        maxLength={30}
         secureTextEntry={securePassword}
         style={[styles.textField, style]}
         value={value}
-        onChangeText={onChangeText}
+        onChangeText={onChange}
         {...rest}
       />
       <View centerV marginB-5 right>
         {secure && (
           <Icon
-            color={color}
+            color={color ?? colors.aqua}
             name={iconName}
             size={35}
             style={styles.visibleIcon}
@@ -64,6 +70,7 @@ const styles = StyleSheet.create({
   textField: {
     fontSize: 20,
     color: colors.white,
+    width: '75%',
   },
   inputIcon: {
     paddingRight: 10,

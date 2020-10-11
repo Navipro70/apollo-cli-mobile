@@ -7,29 +7,25 @@ import { AUTH_ROUTES as ROUTES } from '~/constants'
 import { useLoginUserMutation } from '~/generated/graphql'
 import { useRegister } from '~/lib/hooks'
 import { useNotify } from '~/lib/hooks'
-import { TSignInFormik } from '~/types'
 
 import { TAuthScreens } from '../Auth'
 
-import { SignInView } from './SignInView'
+import { SignInView, Values } from './SignInView'
 
 interface Props {
   navigation: StackNavigationProp<TAuthScreens, ROUTES.SignIn>
 }
 
 export const SingIn = ({ navigation: { navigate } }: Props) => {
-  const signUpHandler = useCallback(() => navigate(ROUTES.SignUp), [navigate])
+  const signUpNavigation = useCallback(() => navigate(ROUTES.SignUp), [navigate])
 
+  const [loginUser] = useLoginUserMutation()
+  const { login } = useRegister()
   const notify = useNotify()
 
-  const [loginUser, { loading }] = useLoginUserMutation()
-  const { login } = useRegister()
-
-  const onSubmit: TSignInFormik = async (values) => {
+  const onSubmit = async (value: Values) => {
     try {
-      const { data } = await loginUser({
-        variables: values,
-      })
+      const { data } = await loginUser({ variables: value })
       if (data) {
         await AsyncStorage.setItem(StorageKeys.Token, data.login.token)
         login(data.login)
@@ -39,5 +35,5 @@ export const SingIn = ({ navigation: { navigate } }: Props) => {
     }
   }
 
-  return <SignInView loading={loading} signUpHandler={signUpHandler} onSubmit={onSubmit} />
+  return <SignInView signUpNavigation={signUpNavigation} onSubmit={onSubmit} />
 }
