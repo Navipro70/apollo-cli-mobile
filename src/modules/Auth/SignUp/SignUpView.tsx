@@ -36,8 +36,7 @@ const { commonForm } = i18n()
 
 export const SignUpView = ({ signInNavigation, onSubmit }: Props) => {
   const { field, submitProps, formik } = useForm({
-    validateOnBlur: true,
-    validateOnChange: false,
+    validateOnChange: true,
     initiallyDisabled: false,
     getSchema,
     onSubmit,
