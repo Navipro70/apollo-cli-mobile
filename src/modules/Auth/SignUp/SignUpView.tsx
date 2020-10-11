@@ -45,10 +45,10 @@ export const SignUpView = ({ signInNavigation, onSubmit }: Props) => {
   return (
     <SafeAreaView style={styles.container}>
       <KeyboardAwareScrollView contentContainerStyle={styles.wrapper}>
-        <View center marginT-40>
+        <View center flex>
           <Text children={i18n().commonForm.createYourAccount} style={styles.h1} />
         </View>
-        <View center>
+        <View centerH flex-2>
           <Input
             inputIcon="account-circle-outline"
             placeholder={commonForm.username}
@@ -73,7 +73,7 @@ export const SignUpView = ({ signInNavigation, onSubmit }: Props) => {
             onSubmitEditing={() => formik.handleSubmit()}
           />
         </View>
-        <View center marginB-10>
+        <View bottom flex>
           <AppButton style={styles.button} title={commonForm.submit} {...submitProps} />
           <AppButton
             style={[styles.button, styles.extraButton]}

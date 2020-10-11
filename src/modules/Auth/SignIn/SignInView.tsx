@@ -41,7 +41,7 @@ export const SignInView = ({ onSubmit, signUpNavigation }: Props) => {
   return (
     <SafeAreaView style={styles.container}>
       <KeyboardAwareScrollView contentContainerStyle={styles.wrapper}>
-        <View center marginT-40>
+        <View center flex>
           <Text children={commonForm.goodMorning} color={colors.gray} style={styles.h3} />
           <Text
             marginT-20
@@ -50,7 +50,7 @@ export const SignInView = ({ onSubmit, signUpNavigation }: Props) => {
             style={styles.h1}
           />
         </View>
-        <View center>
+        <View center flex>
           <Input
             {...field('username')}
             inputIcon="account-circle-outline"
@@ -63,7 +63,7 @@ export const SignInView = ({ onSubmit, signUpNavigation }: Props) => {
             {...field('password', { allowSubmit: true })}
           />
         </View>
-        <View center marginB-10>
+        <View bottom flex>
           <AppButton style={styles.button} title={commonForm.login} {...submitProps} />
           <AppButton
             style={[styles.extraButton, styles.button]}
