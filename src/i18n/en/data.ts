@@ -11,6 +11,7 @@ export const data = {
     goodMorning: 'Good morning!',
     welcomeBack: 'Welcome back.',
     createYourAccount: 'Create your account!',
+    firstTime: 'First time in the app?',
   },
   yup: {
     required: 'This field is require',

@@ -1,5 +1,5 @@
 import { BottomTabBarOptions } from '@react-navigation/bottom-tabs'
-import { Colors } from 'react-native-ui-lib'
+import { Colors, Typography } from 'react-native-ui-lib'
 
 export const colors = {
   white: '#ffffff',
@@ -20,6 +20,35 @@ export const colors = {
 }
 
 Colors.loadColors(colors)
+
+Typography.loadTypographies({
+  h1: {
+    fontSize: 36,
+    lineHeight: 42,
+    fontFamily: 'FlowExt-Bold',
+  },
+  h1Light: {
+    fontSize: 36,
+    lineHeight: 42,
+    letterSpacing: 0.2,
+    fontFamily: 'FlowExt-Bold',
+  },
+  h2: { fontSize: 30, fontFamily: 'FlowExt-Bold' },
+  h3: { fontSize: 26, fontFamily: 'FlowExt' },
+  h4: { fontSize: 22, fontFamily: 'FlowExt' },
+  h4Normal: { fontSize: 22, fontFamily: 'FlowExt' },
+  h5: { fontSize: 20, fontFamily: 'FlowExt' },
+  subtitle: { fontSize: 18, fontFamily: 'FlowExt' },
+  default: { fontSize: 16, fontFamily: 'FlowExt' },
+  small: { fontSize: 14, fontFamily: 'FlowExt' },
+  extraSmall: { fontSize: 12, fontFamily: 'FlowExt' },
+
+  medium: { fontFamily: 'SFProDisplay-Medium' },
+  semibold: { fontFamily: 'SFProDisplay-Semibold' },
+
+  lowercase: { textTransform: 'lowercase' },
+  uppercase: { textTransform: 'uppercase' },
+})
 
 export const tabBarOptions: BottomTabBarOptions = {
   activeTintColor: colors.pink,

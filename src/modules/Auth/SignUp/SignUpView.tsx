@@ -46,9 +46,10 @@ export const SignUpView = ({ signInNavigation, onSubmit }: Props) => {
     <SafeAreaView style={styles.container}>
       <KeyboardAwareScrollView contentContainerStyle={styles.wrapper}>
         <View center flex>
-          <Text children={i18n().commonForm.createYourAccount} style={styles.h1} />
+          <Text h1 children={commonForm.firstTime} color={colors.gray} />
+          <Text h2 marginT-20 children={commonForm.createYourAccount} color={colors.white} />
         </View>
-        <View centerH flex-2>
+        <View center flex>
           <Input
             inputIcon="account-circle-outline"
             placeholder={commonForm.username}
@@ -95,15 +96,11 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-between',
   },
-  h1: {
-    fontSize: 30,
-    color: colors.white,
-  },
-  button: {
-    width: '80%',
-  },
   extraButton: {
     backgroundColor: colors.backgroundAqua,
     marginVertical: 20,
+  },
+  button: {
+    width: '80%',
   },
 })

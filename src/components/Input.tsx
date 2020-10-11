@@ -30,8 +30,8 @@ export const Input = ({
   let iconName: string = securePassword ? 'eye-off-outline' : 'eye-outline'
 
   return (
-    <View centerV marginV-5 row>
-      {Boolean(inputIcon) && (
+    <View centerV row>
+      {inputIcon && (
         <Icon
           color={color ?? colors.aqua}
           name={inputIcon as string}

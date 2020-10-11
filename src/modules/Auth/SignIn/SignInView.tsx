@@ -42,13 +42,8 @@ export const SignInView = ({ onSubmit, signUpNavigation }: Props) => {
     <SafeAreaView style={styles.container}>
       <KeyboardAwareScrollView contentContainerStyle={styles.wrapper}>
         <View center flex>
-          <Text children={commonForm.goodMorning} color={colors.gray} style={styles.h3} />
-          <Text
-            marginT-20
-            children={commonForm.welcomeBack}
-            color={colors.white}
-            style={styles.h1}
-          />
+          <Text h1 children={commonForm.goodMorning} color={colors.gray} />
+          <Text h2 marginT-20 children={commonForm.welcomeBack} color={colors.white} />
         </View>
         <View center flex>
           <Input
@@ -84,12 +79,6 @@ const styles = StyleSheet.create({
   wrapper: {
     flex: 1,
     justifyContent: 'space-between',
-  },
-  h1: {
-    fontSize: 40,
-  },
-  h3: {
-    fontSize: 24,
   },
   extraButton: {
     backgroundColor: colors.backgroundAqua,
