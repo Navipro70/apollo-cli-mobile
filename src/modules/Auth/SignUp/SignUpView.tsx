@@ -7,10 +7,9 @@ import { View, Text } from 'react-native-ui-lib'
 import { AppButton } from '~/components'
 import { Input } from '~/components'
 import { i18n } from '~/i18n'
-import { useForm } from '~/lib/hooks'
+import { OnSubmit, useForm } from '~/lib/hooks'
 import { object, string } from '~/lib/yup'
 import { colors } from '~/styles'
-import { TSignUpFormik } from '~/types'
 
 export interface Values {
   username: string
@@ -21,8 +20,7 @@ export interface Values {
 
 interface Props {
   signInHandler: () => void
-  loading: boolean
-  onSubmit: TSignUpFormik
+  onSubmit: OnSubmit<Values>
 }
 
 const getSchema = () =>
@@ -37,12 +35,9 @@ const { commonForm } = i18n()
 
 export const SignUpView = ({ signInHandler, onSubmit }: Props) => {
   const { field, submitProps, formik } = useForm({
-    initialValues: {
-      username: '',
-      email: '',
-      password: '',
-      confirmPassword: '',
-    },
+    validateOnBlur: true,
+    validateOnChange: false,
+    initiallyDisabled: false,
     getSchema,
     onSubmit,
   })

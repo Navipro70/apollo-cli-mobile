@@ -29,8 +29,8 @@ export const AppButton: FC<TProps> = ({ onPress, title, style, loading, ...rest 
     onPress={onPress}
     {...rest}
   >
-    {!loading && <Spinner color={colors.red} />}
-    <View style={[styles.appButtonWrapper, style, !loading && styles.loadingOpacity]}>
+    {loading && <Spinner color={colors.red} />}
+    <View style={[styles.appButtonWrapper, style, loading && styles.loadingOpacity]}>
       <Text style={styles.appButtonText}>{title}</Text>
     </View>
   </TouchableOpacity>

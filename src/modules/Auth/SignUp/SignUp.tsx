@@ -1,6 +1,6 @@
 import AsyncStorage from '@react-native-community/async-storage'
 import { StackNavigationProp } from '@react-navigation/stack'
-import React, { useCallback, useMemo } from 'react'
+import React, { useCallback } from 'react'
 
 import { StorageKeys } from '~/constants'
 import { AUTH_ROUTES as ROUTES } from '~/constants'
@@ -8,11 +8,10 @@ import { useRegisterUserMutation } from '~/generated/graphql'
 import { extractServerError } from '~/lib/hooks'
 import { useRegister } from '~/lib/hooks'
 import { useNotify } from '~/lib/hooks'
-import { TSignUpFormik } from '~/types'
 
 import { TAuthScreens } from '../Auth'
 
-import { SignUpView } from './SignUpView'
+import { SignUpView, Values } from './SignUpView'
 
 interface Props {
   navigation: StackNavigationProp<TAuthScreens, ROUTES.SignUp>
@@ -21,12 +20,11 @@ interface Props {
 export const SignUp = ({ navigation: { navigate } }: Props) => {
   const signInHandler = useCallback(() => navigate(ROUTES.SignIn), [navigate])
 
-  const notify = useMemo(useNotify, [])
-
   const [addUser] = useRegisterUserMutation()
-  const { login } = useMemo(useRegister, [])
+  const { login } = useRegister()
+  const notify = useNotify()
 
-  const onSubmit: TSignUpFormik = async (values, formikBag) => {
+  const onSubmit = async (values: Values, { setFieldError }) => {
     try {
       const { data } = await addUser({ variables: values })
       if (data) {
@@ -35,7 +33,7 @@ export const SignUp = ({ navigation: { navigate } }: Props) => {
       }
     } catch (err) {
       const [fieldError, messageError] = extractServerError(err)
-      if (fieldError && messageError) formikBag.setFieldError(fieldError, messageError)
+      if (fieldError && messageError) setFieldError(fieldError, messageError)
       else notify.error(err)
     }
   }
