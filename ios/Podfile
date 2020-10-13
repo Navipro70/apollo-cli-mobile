@@ -12,6 +12,8 @@ target 'Astronomy' do
 
   pod 'ReactNativeART', :path => '../node_modules/@react-native-community/art'
 
+  pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
+
   target 'AstronomyTests' do
     inherit! :complete
     # Pods for testing
