@@ -27,6 +27,6 @@
       "~/*": ["src/*"]
     }
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "./testsSetup/setup.ts"],
   "exclude": ["dist", "node_modules"]
 }
