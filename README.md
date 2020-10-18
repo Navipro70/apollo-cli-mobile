@@ -32,7 +32,6 @@ Because my app use http://localhost:5000, and if you want deploy similar server,
 ## Future functionality
 
 #### ***Each part of the application will be covered with tests***
-#### ***CI/CD integrated in github with docker***
 #### ***A remote server with more functionality will be created***
 #### ***Animations will be created in various parts of the application***
 #### ***The design will be updated***
