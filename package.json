@@ -85,7 +85,10 @@
   "jest": {
     "preset": "react-native",
     "setupFiles": [
-      "<rootDir>/testsSetup/setup.ts"
+      "<rootDir>/testsSetup/communityMock.ts",
+      "<rootDir>/testsSetup/localizeMock.ts",
+      "<rootDir>/testsSetup/modulesMock.ts",
+      "<rootDir>/testsSetup/navigationMock.ts"
     ],
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "jest-transform-stub"

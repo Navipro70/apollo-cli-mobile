@@ -1,23 +1,3 @@
-import 'react-native-gesture-handler/jestSetup'
-import mockAsyncStorage from '@react-native-community/async-storage/jest/async-storage-mock'
-import { NativeModules } from 'react-native'
-
-jest.mock('react-native-reanimated', () => {
-  // eslint-disable-next-line @typescript-eslint/no-require-imports
-  const Reanimated = require('react-native-reanimated/mock')
-
-  Reanimated.default.call = () => {}
-
-  return Reanimated
-})
-
-jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper')
-
-jest.mock('@react-native-community/async-storage', () => mockAsyncStorage)
-
-NativeModules.StatusBarManager = { getHeight: jest.fn() }
-jest.mock('@react-native-community/blur', () => {})
-
 jest.mock('react-native-localize', () => ({
   getLocales: () => [
     { countryCode: 'GB', languageTag: 'en-GB', languageCode: 'en', isRTL: false },
