@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { StyleSheet } from 'react-native'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import { SafeAreaView } from 'react-native-safe-area-context'
@@ -49,6 +49,7 @@ export const SignInView = ({ onSubmit, signUpNavigation }: Props) => {
             {...field('username')}
             inputIcon="account-circle-outline"
             placeholder={commonForm.username}
+            returnKeyType="next"
           />
           <Input
             secure

@@ -1,18 +1,20 @@
 import React, { useState } from 'react'
-import { StyleSheet } from 'react-native'
+import { StyleProp, StyleSheet, ViewStyle } from 'react-native'
 import { TextField, View } from 'react-native-ui-lib'
 import { TextFieldProps } from 'react-native-ui-lib/typings'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
+import { FieldProps } from '~/lib/hooks'
 import { colors } from '~/styles'
 
-interface Props extends Omit<TextFieldProps, 'onChange'> {
+interface Props
+  extends Omit<TextFieldProps, 'onChange' | 'onTextChange' | 'value'>,
+    FieldProps<string | undefined> {
   value: string
-  onChange: (text: string) => void
   color?: string
   error?: string
   inputIcon?: string
-  style?: object
+  style?: StyleProp<ViewStyle>
   secure?: boolean
 }
 
@@ -24,6 +26,7 @@ export const Input = ({
   secure,
   inputIcon,
   error,
+  onSubmit,
   ...rest
 }: Props) => {
   const [securePassword, setSecurePassword] = useState<boolean>(secure ?? false)
@@ -45,10 +48,12 @@ export const Input = ({
         color={colors.aqua}
         error={error}
         maxLength={30}
+        returnKeyType="done"
         secureTextEntry={securePassword}
         style={[styles.textField, style]}
         value={value}
         onChangeText={onChange}
+        onSubmitEditing={onSubmit}
         {...rest}
       />
       <View centerV marginB-5 right>
