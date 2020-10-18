@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 import { ApolloClient } from 'apollo-client'
 import { createHttpLink } from 'apollo-link-http'
+import fetch from 'node-fetch'
 import React, { FC } from 'react'
 import { StatusBar } from 'react-native'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
@@ -12,6 +13,7 @@ import { NotificationsProvider } from '~/lib/hooks'
 
 const httpLink = createHttpLink({
   uri: 'http://localhost:5000',
+  fetch,
 })
 
 const client = new ApolloClient({

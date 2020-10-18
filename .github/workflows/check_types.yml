@@ -17,3 +17,6 @@ jobs:
         run: |
           yarn
           yarn ts:check:ci
+
+      - name: Run tests
+        run: yarn test

@@ -33,6 +33,7 @@
     "dayjs": "^1.8.30",
     "formik": "^2.1.5",
     "jwt-decode": "^2.2.0",
+    "node-fetch": "^2.6.1",
     "react": "16.13.1",
     "react-native": "0.63.1",
     "react-native-gesture-handler": "^1.6.1",
@@ -56,6 +57,7 @@
     "@graphql-codegen/typescript-operations": "^1.17.0",
     "@graphql-codegen/typescript-react-apollo": "^1.17.0",
     "@react-native-community/eslint-config": "^2.0.0",
+    "@types/jest": "^26.0.14",
     "@types/jwt-decode": "^2.2.1",
     "@types/react": "^16.9.43",
     "@types/react-native": "^0.63.1",
@@ -72,6 +74,7 @@
     "eslint-plugin-react-native": "^3.10.0",
     "graphql": "^15.3.0",
     "jest": "^25.1.0",
+    "jest-transform-stub": "^2.0.0",
     "lint-staged": "^10.4.0",
     "metro-react-native-babel-preset": "^0.63.0",
     "prettier": "^2.0.5",
@@ -80,6 +83,15 @@
     "typescript": "^3.9.7"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "setupFiles": [
+      "<rootDir>/testsSetup/communityMock.ts",
+      "<rootDir>/testsSetup/localizeMock.ts",
+      "<rootDir>/testsSetup/modulesMock.ts",
+      "<rootDir>/testsSetup/navigationMock.ts"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "jest-transform-stub"
+    }
   }
 }

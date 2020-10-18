@@ -2,7 +2,7 @@ import * as RNLocalize from 'react-native-localize'
 
 import { data as en } from './en/data'
 const data = { en }
-const getLang = () => {
+export const getLang = () => {
   const lang = RNLocalize.findBestAvailableLanguage(['en']) ?? null
   const languageTag = lang?.languageTag ?? 'en'
 
