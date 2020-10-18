@@ -9,7 +9,10 @@ jest.mock('react-native-localize', () => ({
     decimalSeparator: '.',
     groupingSeparator: ',',
   }),
-  findBestAvailableLanguage: () => ({ languageTag: 'en', isRTL: 'false' }),
+  findBestAvailableLanguage: (langs: [string]) => ({
+    languageTag: langs[0],
+    isRTL: 'false',
+  }),
   getCalendar: () => 'gregorian', // or "japanese", "buddhist"
   getCountry: () => 'US', // the country code you want
   getCurrencies: () => ['USD', 'EUR'], // can be empty array
